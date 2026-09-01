@@ -1,0 +1,20 @@
+[
+  {"name":"theme_info","theme_name":"GROVERA Custom Commerce","theme_version":"3.0.0","theme_author":"GROVERA","theme_documentation_url":"https://help.shopify.com","theme_support_url":"https://help.shopify.com"},
+  {"name":"Brand","settings":[
+    {"type":"image_picker","id":"logo","label":"Logo (optional — GROVERA asset is fallback)"},
+    {"type":"color","id":"color_primary","label":"Primary green","default":"#0A4B1B"},
+    {"type":"color","id":"color_secondary","label":"Secondary green","default":"#70A32E"},
+    {"type":"color","id":"color_accent","label":"Gold accent","default":"#C29D36"},
+    {"type":"color","id":"color_background","label":"Background","default":"#FFFFFF"},
+    {"type":"color","id":"color_text","label":"Text","default":"#152019"},
+    {"type":"font_picker","id":"type_heading_font","label":"Heading font","default":"assistant_n7"},
+    {"type":"font_picker","id":"type_body_font","label":"Body font","default":"assistant_n4"}
+  ]},
+  {"name":"Commerce","settings":[
+    {"type":"range","id":"free_shipping_threshold","label":"Free shipping progress threshold","min":0,"max":1000,"step":25,"unit":"AED","default":250,"info":"Set to 0 to hide the progress bar."}
+  ]},
+  {"name":"Contact","settings":[
+    {"type":"text","id":"whatsapp_number","label":"WhatsApp number with country code","info":"Example: 971501234567"},
+    {"type":"text","id":"whatsapp_label","label":"WhatsApp label","default":"تواصل معنا"}
+  ]}
+]
