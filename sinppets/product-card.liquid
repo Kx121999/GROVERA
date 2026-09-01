@@ -1,0 +1,49 @@
+<article class="g-product-card" data-product-card data-product-handle="{{ product.handle }}">
+  <div class="g-product-media-wrap">
+    <a href="{{ product.url }}" class="g-product-media" aria-label="{{ product.title | escape }}">
+      {% if product.featured_image %}
+        {{ product.featured_image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '320,480,720,1000', sizes: '(max-width: 749px) 50vw, (max-width: 1100px) 33vw, 25vw', alt: product.featured_image.alt | default: product.title }}
+      {% else %}
+        <div class="g-product-placeholder">{{ 'product-1' | placeholder_svg_tag }}</div>
+      {% endif %}
+      <div class="g-product-badges">
+        {% if product.compare_at_price_max > product.price %}
+          {% assign discount_amount = product.compare_at_price_max | minus: product.price | times: 100 | divided_by: product.compare_at_price_max %}
+          <span class="g-pill g-pill--sale">-{{ discount_amount }}%</span>
+        {% endif %}
+        {% if product.tags contains 'new' %}<span class="g-pill g-pill--new">{% if request.locale.iso_code == 'ar' %}جديد{% else %}New{% endif %}</span>{% endif %}
+        {% if product.tags contains 'bestseller' %}<span class="g-pill g-pill--best">{% if request.locale.iso_code == 'ar' %}الأكثر مبيعاً{% else %}Best seller{% endif %}</span>{% endif %}
+      </div>
+    </a>
+    <button class="g-wishlist-btn" type="button" data-wishlist-toggle data-handle="{{ product.handle }}" data-title="{{ product.title | escape }}" data-url="{{ product.url }}" data-image="{% if product.featured_image %}{{ product.featured_image | image_url: width: 400 }}{% endif %}" aria-label="{% if request.locale.iso_code == 'ar' %}إضافة للمفضلة{% else %}Add to wishlist{% endif %}">
+      {% render 'icon', name: 'heart' %}
+    </button>
+  </div>
+  <div class="g-product-info">
+    <span class="g-product-type">{{ product.type | default: product.vendor | default: 'GROVERA' }}</span>
+    <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+    <div class="g-price g-card-price">
+      {% if product.price_varies %}<small>{% if request.locale.iso_code == 'ar' %}من{% else %}From{% endif %}</small>{% endif %}
+      <strong>{{ product.price | money }}</strong>
+      {% if product.compare_at_price_max > product.price %}<s>{{ product.compare_at_price_max | money }}</s>{% endif %}
+    </div>
+    <div class="g-product-actions">
+      {% if product.available %}
+        {% if product.has_only_default_variant %}
+          <form method="post" action="{{ routes.cart_add_url }}" data-quick-add-form>
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <input type="hidden" name="quantity" value="1">
+            <button class="g-card-add" type="submit" aria-label="{% if request.locale.iso_code == 'ar' %}أضف {{ product.title | escape }} للسلة{% else %}Add {{ product.title | escape }} to cart{% endif %}">
+              {% render 'icon', name: 'bag' %}<span>{% if request.locale.iso_code == 'ar' %}أضف للسلة{% else %}Add to cart{% endif %}</span>
+            </button>
+          </form>
+        {% else %}
+          <a class="g-card-add" href="{{ product.url }}">{% render 'icon', name: 'grid' %}<span>{% if request.locale.iso_code == 'ar' %}اختر الخيارات{% else %}Choose options{% endif %}</span></a>
+        {% endif %}
+      {% else %}
+        <span class="g-card-add is-disabled">{% if request.locale.iso_code == 'ar' %}غير متوفر{% else %}Sold out{% endif %}</span>
+      {% endif %}
+      <a href="{{ product.url }}" class="g-round-link" aria-label="{{ product.title | escape }}">{% render 'icon', name: 'arrow' %}</a>
+    </div>
+  </div>
+</article>
