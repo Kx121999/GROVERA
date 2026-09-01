@@ -1,0 +1,1 @@
+{"sections":{"main":{"type":"grovera-main-product","settings":{}},"recommendations":{"type":"grovera-recommendations","settings":{"limit":8}},"recent":{"type":"grovera-recently-viewed","settings":{}},"benefits":{"type":"grovera-benefits","settings":{}}},"order":["main","recommendations","recent","benefits"]}
