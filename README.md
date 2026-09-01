@@ -1,80 +1,29 @@
-# GROVERA — Shopify Theme V3
+# GROVERA — GitHub Pages + Shopify Theme
 
-Custom Shopify Online Store 2.0 theme for **GROVERA**, an agricultural e-commerce brand.
+This repository is arranged so GitHub Pages opens the GROVERA storefront preview directly.
 
-## Theme highlights
+## GitHub Pages preview files at repository root
 
-- Premium GROVERA green / gold visual identity
-- Arabic RTL with English-ready LTR support
-- Responsive mobile-first storefront
-- Homepage with hero, agricultural categories, featured products, brands, offers and trust content
-- Mega menu and mobile navigation
-- Predictive search overlay
-- AJAX cart drawer and quantity controls
-- Wishlist and recently viewed using browser local storage
-- Shopify collection filters, sorting and pagination
-- Product gallery, thumbnails, zoom, variants, quantity, dynamic checkout and WhatsApp CTA
-- Product recommendations
-- About, Contact, FAQ, Offers, Search, Cart, 404 and All Collections templates
-- Canonical / social metadata and structured data
-- Theme Editor configurable sections and settings
+- `index.html` — homepage
+- `product.html` — product page preview
+- `collection.html` — collection page preview
+- `assets/` — images, logo, CSS and theme assets
+- `preview-extra.css` — static preview helpers
+- `preview.js` — static preview interactions
+- `.nojekyll` — GitHub Pages compatibility
 
-## Repository structure
+## Shopify theme source
 
-```text
-assets/      CSS, JavaScript, logo and image assets
-config/      Shopify theme settings
-layout/      Main theme layout
-locales/     Arabic and English locale files
-sections/    Theme sections
-snippets/    Reusable Liquid snippets
-templates/   JSON Shopify templates
-```
+The production Shopify Online Store 2.0 source is inside:
 
-## Development with Shopify CLI
+`shopify-theme/`
 
-After cloning the repository and authenticating Shopify CLI:
+Upload the contents of that folder through Shopify CLI, or use the separate Shopify theme ZIP supplied with the project.
 
-```bash
-shopify theme dev --store your-store.myshopify.com
-```
+## Enable GitHub Pages
 
-To push the theme as an unpublished theme:
+GitHub → Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save.
 
-```bash
-shopify theme push --unpublished
-```
+The root `index.html` means Pages will show the storefront instead of README.
 
-Preview and QA the unpublished theme before publishing.
-
-## Store setup still required
-
-The repository contains the storefront theme, not the merchant's private Shopify Admin data. Before launch configure:
-
-- Real products, prices, variants, inventory and product photos
-- Collections and navigation menus
-- GROVERA WhatsApp number
-- Best Sellers / New Arrivals selections
-- UAE shipping rules and rates
-- VAT / tax configuration
-- Payment methods and optional cash on delivery
-- Domain and sender email
-- Privacy, returns, shipping and terms policies
-- Meta / Google / TikTok tracking through the approved Shopify setup
-
-## Product page scope
-
-The following custom informational blocks are intentionally excluded from the product page:
-
-- لماذا هذا المنتج؟
-- يستخدم في ماذا؟
-- المحاصيل المناسبة
-- المشكلة الزراعية
-- مرحلة الاستخدام
-- طريقة الاستخدام
-
-The product page focuses on the product media, title, price, variants, quantity, stock state, description, specifications, shipping / returns, cart, checkout and WhatsApp.
-
-## Important
-
-Do not commit API keys, access tokens, passwords or `.env` files to this repository.
+> The GitHub Pages version is a static visual preview. Checkout, real catalog, inventory, customer accounts and Shopify dynamic data only work on Shopify.

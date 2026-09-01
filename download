@@ -1,26 +1,7 @@
-# OS files
 .DS_Store
 Thumbs.db
-
-# Editors
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Local environment / secrets
 .env
 .env.*
-!.env.example
-
-# Node / tooling caches
+*.log
 node_modules/
-.cache/
-.tmp/
-
-# Shopify CLI local state
 .shopify/
-
-# Build / backup archives
-*.zip
-*.tar.gz

@@ -1,0 +1,18 @@
+/* GitHub Pages static preview helpers */
+.preview-note{background:#c29d36;color:#132017;text-align:center;padding:8px 16px;font-size:12px;font-weight:800;line-height:1.5}
+.preview-brand-menu{display:flex;justify-content:center;gap:26px;align-items:center}
+.preview-brand-menu a{font-size:14px;font-weight:800;transition:.2s}
+.preview-brand-menu a:hover{color:#0c5b22}
+.preview-footer-menu{display:grid;gap:9px}
+.preview-footer-menu a{font-size:12px;color:#cbd8cc;cursor:pointer}
+.preview-footer-menu a:hover{color:#fff}
+body{padding-bottom:0}
+.g-search-overlay,.g-backdrop{display:none}
+.g-search-overlay.is-open{display:flex}
+.g-backdrop.is-open{display:block}
+.g-cart-drawer,.g-wishlist-drawer{visibility:visible}
+@media(max-width:850px){
+  .preview-brand-menu{display:none}
+  .preview-note{font-size:10px;padding:7px 10px}
+  body{padding-bottom:68px}
+}
