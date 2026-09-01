@@ -1,0 +1,27 @@
+GROVERA SHOPIFY THEME V3 — QA REPORT
+====================================
+
+Automated/static checks completed:
+[PASS] All theme JSON files parse successfully.
+[PASS] All section {% schema %} JSON blocks parse successfully.
+[PASS] JavaScript passes Node syntax check.
+[PASS] Required Shopify theme directories present: assets, config, layout, locales, sections, snippets, templates.
+[PASS] Home, product, collection, cart, search, all-collections, page, about, contact, FAQ, offers and 404 templates present.
+[PASS] Arabic RTL / English LTR direction is set from request.locale.
+[PASS] Real GROVERA logo asset and favicon included.
+[PASS] Product page excludes the six custom agricultural content blocks requested for removal.
+[PASS] Responsive image markup and lazy loading used on non-critical storefront images.
+[PASS] Product structured data and Organization structured data included.
+[PASS] Cart AJAX routes, predictive search endpoint, wishlist and recently viewed UI implemented.
+[PASS] Mobile menu, bottom dock, filter drawer and sticky add-to-cart implemented.
+
+Store-dependent validation still required after upload to a real Shopify store:
+- Checkout/payment methods and COD availability.
+- Shipping rates/threshold and VAT settings.
+- Real product variant combinations and inventory behavior.
+- Menu/collection assignments.
+- Predictive search and recommendation output using real catalog data.
+- Meta/Google/TikTok event tracking after actual IDs/channels are connected.
+- Final device QA on the published preview URL.
+
+No store-specific payment, shipping, phone, domain, policy or tracking values were invented.

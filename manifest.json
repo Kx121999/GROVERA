@@ -1,0 +1,266 @@
+{
+  "theme": "GROVERA Custom Commerce",
+  "version": "2.0.0",
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 1636,
+      "sha256": "64e38d2d2172b24b"
+    },
+    {
+      "file": "assets/grovera.css",
+      "bytes": 28637,
+      "sha256": "f9a873e55823c1f4"
+    },
+    {
+      "file": "assets/product-seeds.png",
+      "bytes": 38917,
+      "sha256": "554b7f45b916c8c2"
+    },
+    {
+      "file": "assets/product-fertilizer.png",
+      "bytes": 38869,
+      "sha256": "38f10914c6216462"
+    },
+    {
+      "file": "assets/cat-pesticides.jpg",
+      "bytes": 38322,
+      "sha256": "e920347555e594ba"
+    },
+    {
+      "file": "assets/grovera.js",
+      "bytes": 3857,
+      "sha256": "230c698d4cbac787"
+    },
+    {
+      "file": "assets/product-irrigation.png",
+      "bytes": 40359,
+      "sha256": "0592a04c26198664"
+    },
+    {
+      "file": "assets/cat-seeds.jpg",
+      "bytes": 54070,
+      "sha256": "33b6b1761357ee87"
+    },
+    {
+      "file": "assets/product-protection.png",
+      "bytes": 40293,
+      "sha256": "b68b48df14cf3b85"
+    },
+    {
+      "file": "assets/cat-greenhouses.jpg",
+      "bytes": 39179,
+      "sha256": "cb4f087acf672643"
+    },
+    {
+      "file": "assets/cat-tools.jpg",
+      "bytes": 28578,
+      "sha256": "b085ad258df4e8d3"
+    },
+    {
+      "file": "assets/cat-fertilizers.jpg",
+      "bytes": 32178,
+      "sha256": "4181c8a87f7671b3"
+    },
+    {
+      "file": "assets/cat-irrigation.jpg",
+      "bytes": 40281,
+      "sha256": "c1bfdfe49c23a93b"
+    },
+    {
+      "file": "assets/grovera-logo.png",
+      "bytes": 771303,
+      "sha256": "00d544225264dbed"
+    },
+    {
+      "file": "assets/grovera-hero.jpg",
+      "bytes": 192618,
+      "sha256": "b706601c743b2574"
+    },
+    {
+      "file": "snippets/icon.liquid",
+      "bytes": 1891,
+      "sha256": "7d6b16159bd6d558"
+    },
+    {
+      "file": "snippets/product-card.liquid",
+      "bytes": 1402,
+      "sha256": "8af331a1a77f44e7"
+    },
+    {
+      "file": "locales/en.default.json",
+      "bytes": 39,
+      "sha256": "c24d5512f58db683"
+    },
+    {
+      "file": "locales/ar.json",
+      "bytes": 56,
+      "sha256": "e638e13b7b2a5bcf"
+    },
+    {
+      "file": "config/settings_schema.json",
+      "bytes": 1226,
+      "sha256": "75ae1c3923490752"
+    },
+    {
+      "file": "config/settings_data.json",
+      "bytes": 473,
+      "sha256": "b6eb03ff2b28e8ac"
+    },
+    {
+      "file": "layout/theme.liquid",
+      "bytes": 4602,
+      "sha256": "05549ce397f371ac"
+    },
+    {
+      "file": "sections/grovera-main-page.liquid",
+      "bytes": 303,
+      "sha256": "b3a00e1af4079a14"
+    },
+    {
+      "file": "sections/grovera-newsletter.liquid",
+      "bytes": 1272,
+      "sha256": "e6410667ade9dcf6"
+    },
+    {
+      "file": "sections/grovera-main-cart.liquid",
+      "bytes": 2720,
+      "sha256": "7b16b8473b2b7b87"
+    },
+    {
+      "file": "sections/grovera-benefits.liquid",
+      "bytes": 1463,
+      "sha256": "f97cbd99db9f358b"
+    },
+    {
+      "file": "sections/grovera-main-search.liquid",
+      "bytes": 1576,
+      "sha256": "85d602cc707c7004"
+    },
+    {
+      "file": "sections/grovera-hero.liquid",
+      "bytes": 3438,
+      "sha256": "ac788ef1cf55caa7"
+    },
+    {
+      "file": "sections/grovera-main-product.liquid",
+      "bytes": 5976,
+      "sha256": "1f96ca6d86a9cf5c"
+    },
+    {
+      "file": "sections/grovera-footer.liquid",
+      "bytes": 1339,
+      "sha256": "c1427c2331b17e7b"
+    },
+    {
+      "file": "sections/grovera-featured-products.liquid",
+      "bytes": 2188,
+      "sha256": "8d76debd04e4cc78"
+    },
+    {
+      "file": "sections/grovera-faq.liquid",
+      "bytes": 1405,
+      "sha256": "cc0356c6916ac149"
+    },
+    {
+      "file": "sections/grovera-header.liquid",
+      "bytes": 4107,
+      "sha256": "2b3e86f08e8120c9"
+    },
+    {
+      "file": "sections/grovera-contact.liquid",
+      "bytes": 2373,
+      "sha256": "557f9132534acbcd"
+    },
+    {
+      "file": "sections/grovera-404.liquid",
+      "bytes": 647,
+      "sha256": "19e2e5200c37fb34"
+    },
+    {
+      "file": "sections/grovera-story.liquid",
+      "bytes": 2201,
+      "sha256": "b9f1e56f401581b9"
+    },
+    {
+      "file": "sections/grovera-about.liquid",
+      "bytes": 1883,
+      "sha256": "80b9b3e359e32ea3"
+    },
+    {
+      "file": "sections/grovera-offers.liquid",
+      "bytes": 1011,
+      "sha256": "4f1f961abcbf63bc"
+    },
+    {
+      "file": "sections/grovera-main-collection.liquid",
+      "bytes": 2742,
+      "sha256": "581f26a0a3548f04"
+    },
+    {
+      "file": "sections/grovera-categories.liquid",
+      "bytes": 3406,
+      "sha256": "21d239a026e83398"
+    },
+    {
+      "file": "sections/grovera-promo.liquid",
+      "bytes": 1100,
+      "sha256": "a6e4262100bdb441"
+    },
+    {
+      "file": "templates/product.json",
+      "bytes": 85,
+      "sha256": "45dfb2113df0cf04"
+    },
+    {
+      "file": "templates/page.json",
+      "bytes": 82,
+      "sha256": "7fad0d1bef4b66ba"
+    },
+    {
+      "file": "templates/index.json",
+      "bytes": 1404,
+      "sha256": "f42c8665455f9378"
+    },
+    {
+      "file": "templates/page.faq.json",
+      "bytes": 760,
+      "sha256": "f6101d8f9ad88d25"
+    },
+    {
+      "file": "templates/collection.json",
+      "bytes": 88,
+      "sha256": "9c42c9e1146b8eb6"
+    },
+    {
+      "file": "templates/page.contact.json",
+      "bytes": 80,
+      "sha256": "b38fe4416bbef854"
+    },
+    {
+      "file": "templates/page.offers.json",
+      "bytes": 79,
+      "sha256": "a94999fb93f5ba6a"
+    },
+    {
+      "file": "templates/search.json",
+      "bytes": 84,
+      "sha256": "bd6e5d2209a3eaba"
+    },
+    {
+      "file": "templates/cart.json",
+      "bytes": 82,
+      "sha256": "fa19549ee780d748"
+    },
+    {
+      "file": "templates/page.about.json",
+      "bytes": 78,
+      "sha256": "0297af429253cbfb"
+    },
+    {
+      "file": "templates/404.json",
+      "bytes": 76,
+      "sha256": "bb07276952a55ed4"
+    }
+  ]
+}
