@@ -1,0 +1,61 @@
+<header class="g-site-header" data-site-header>
+  {% if section.settings.announcement != blank %}
+    <div class="g-announcement"><div class="g-container">
+      <span>{{ section.settings.announcement }}</span>
+      {% if section.settings.announcement_link != blank %}<a href="{{ section.settings.announcement_link }}">{% if request.locale.iso_code == 'ar' %}اكتشف الآن{% else %}Explore now{% endif %}</a>{% endif %}
+    </div></div>
+  {% endif %}
+  <div class="g-container g-nav">
+    <button class="g-icon-btn g-mobile-only" type="button" data-menu-open aria-label="{% if request.locale.iso_code == 'ar' %}فتح القائمة{% else %}Open menu{% endif %}">{% render 'icon', name:'menu' %}</button>
+    <a class="g-brand" href="{{ routes.root_url }}" aria-label="GROVERA Home">
+      {% if settings.logo != blank %}{{ settings.logo | image_url: width: 520 | image_tag: loading:'eager', widths:'180,260,360,520', alt:'GROVERA' }}{% else %}<img src="{{ 'grovera-logo.png' | asset_url }}" alt="GROVERA" width="520" height="260" fetchpriority="high">{% endif %}
+    </a>
+    <nav class="g-desktop-nav" aria-label="Main navigation">
+      {% for link in section.settings.menu.links %}
+        <div class="g-nav-item{% if link.links != blank %} has-sub{% endif %}">
+          <a href="{{ link.url }}">{{ link.title }}{% if link.links != blank %}<span class="g-nav-chevron">{% render 'icon', name:'chevron' %}</span>{% endif %}</a>
+          {% if link.links != blank %}
+            <div class="g-mega" role="group" aria-label="{{ link.title | escape }}">
+              <div class="g-mega-links">
+                {% for child in link.links %}
+                  <div><a class="g-mega-title" href="{{ child.url }}">{{ child.title }}</a>{% for grand in child.links %}<a href="{{ grand.url }}">{{ grand.title }}</a>{% endfor %}</div>
+                {% endfor %}
+              </div>
+              <a class="g-mega-promo" href="{{ routes.collections_url }}" style="background-image:linear-gradient(180deg,rgba(4,38,14,.04),rgba(4,38,14,.88)),url('{{ 'cat-greenhouses.jpg' | asset_url }}')"><span>GROVERA</span><strong>{% if request.locale.iso_code == 'ar' %}حلول زراعية متكاملة{% else %}Complete agricultural solutions{% endif %}</strong><small>{% if request.locale.iso_code == 'ar' %}تسوق جميع الأقسام{% else %}Explore all collections{% endif %}</small></a>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </nav>
+    <div class="g-nav-actions">
+      {% if localization.available_languages.size > 1 %}
+        {% form 'localization', class:'g-locale-form g-desktop-only', id:'HeaderLanguageForm' %}
+          <button class="g-locale-trigger" type="button" data-locale-toggle>{{ localization.language.iso_code | upcase }} {% render 'icon', name:'chevron' %}</button>
+          <div class="g-locale-menu">{% for language in localization.available_languages %}<button type="submit" name="language_code" value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}class="is-active"{% endif %}>{{ language.endonym_name }}</button>{% endfor %}</div>
+        {% endform %}
+      {% endif %}
+      <button class="g-icon-btn" type="button" data-search-open aria-label="{% if request.locale.iso_code == 'ar' %}بحث{% else %}Search{% endif %}">{% render 'icon', name:'search' %}</button>
+      <button class="g-icon-btn g-desktop-only g-wishlist-header" type="button" data-wishlist-open aria-label="{% if request.locale.iso_code == 'ar' %}المفضلة{% else %}Wishlist{% endif %}">{% render 'icon', name:'heart' %}<span data-wishlist-count>0</span></button>
+      {% if shop.customer_accounts_enabled %}<a class="g-icon-btn g-desktop-only" href="{{ routes.account_url }}" aria-label="{% if request.locale.iso_code == 'ar' %}الحساب{% else %}Account{% endif %}">{% render 'icon', name:'user' %}</a>{% endif %}
+      <button class="g-icon-btn g-cart-button" type="button" data-cart-open aria-label="{% if request.locale.iso_code == 'ar' %}السلة{% else %}Cart{% endif %}">{% render 'icon', name:'bag' %}<span data-cart-count>{{ cart.item_count }}</span></button>
+    </div>
+  </div>
+  <div class="g-mobile-menu" data-mobile-menu aria-hidden="true">
+    <div class="g-mobile-menu-head"><a href="{{ routes.root_url }}"><img src="{{ 'grovera-logo.png' | asset_url }}" alt="GROVERA"></a><button type="button" data-menu-close aria-label="Close">×</button></div>
+    <nav>{% for link in section.settings.menu.links %}<div class="g-mobile-nav-group"><a href="{{ link.url }}">{{ link.title }}</a>{% if link.links != blank %}<button type="button" data-mobile-sub-toggle aria-label="Toggle">+</button><div class="g-mobile-sub">{% for child in link.links %}<a href="{{ child.url }}">{{ child.title }}</a>{% for grand in child.links %}<a class="g-grand" href="{{ grand.url }}">{{ grand.title }}</a>{% endfor %}{% endfor %}</div>{% endif %}</div>{% endfor %}</nav>
+    <div class="g-mobile-menu-foot">
+      {% if localization.available_languages.size > 1 %}{% form 'localization' %}{% for language in localization.available_languages %}<button type="submit" name="language_code" value="{{ language.iso_code }}">{{ language.endonym_name }}</button>{% endfor %}{% endform %}{% endif %}
+      {% if settings.whatsapp_number != blank %}<a class="g-btn g-btn--whatsapp g-btn--full" href="https://wa.me/{{ settings.whatsapp_number | remove:'+' | remove:' ' }}">WhatsApp</a>{% endif %}
+    </div>
+  </div>
+</header>
+<div class="g-mobile-dock">
+  <a href="{{ routes.root_url }}">{% render 'icon', name:'home' %}<span>{% if request.locale.iso_code == 'ar' %}الرئيسية{% else %}Home{% endif %}</span></a>
+  <a href="{{ routes.collections_url }}">{% render 'icon', name:'grid' %}<span>{% if request.locale.iso_code == 'ar' %}الأقسام{% else %}Shop{% endif %}</span></a>
+  <button type="button" data-search-open>{% render 'icon', name:'search' %}<span>{% if request.locale.iso_code == 'ar' %}بحث{% else %}Search{% endif %}</span></button>
+  <button type="button" data-wishlist-open>{% render 'icon', name:'heart' %}<span>{% if request.locale.iso_code == 'ar' %}المفضلة{% else %}Wishlist{% endif %}</span></button>
+  <button type="button" data-cart-open>{% render 'icon', name:'bag' %}<span>{% if request.locale.iso_code == 'ar' %}السلة{% else %}Cart{% endif %}</span></button>
+</div>
+{% schema %}
+{"name":"GROVERA Header","settings":[{"type":"text","id":"announcement","label":"Announcement","default":"توصيل داخل الإمارات • دعم مباشر • تسوق آمن"},{"type":"url","id":"announcement_link","label":"Announcement link"},{"type":"link_list","id":"menu","label":"Main menu","default":"main-menu"}]}
+{% endschema %}

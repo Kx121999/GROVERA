@@ -1,0 +1,7 @@
+<section class="g-section g-recently-viewed" data-recently-viewed-section hidden>
+  <div class="g-container">
+    <div class="g-section-head"><div><span class="g-kicker">RECENTLY VIEWED</span><h2>{% if request.locale.iso_code == 'ar' %}شاهدتها مؤخراً{% else %}Recently viewed{% endif %}</h2></div></div>
+    <div class="g-products-grid" data-recently-viewed-grid></div>
+  </div>
+</section>
+{% schema %}{"name":"GROVERA Recently Viewed","settings":[],"presets":[{"name":"GROVERA Recently Viewed"}]}{% endschema %}

@@ -1,0 +1,27 @@
+<section class="g-hero{% if section.settings.compact %} g-hero--compact{% endif %}">
+  <div class="g-container g-hero-grid">
+    <div class="g-hero-copy">
+      {% if section.settings.eyebrow != blank %}<span class="g-kicker">{{ section.settings.eyebrow }}</span>{% endif %}
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.text }}</p>
+      <div class="g-hero-actions">
+        {% if section.settings.primary_label != blank %}<a class="g-btn g-btn--primary" href="{{ section.settings.primary_link }}">{{ section.settings.primary_label }} {% render 'icon', name: 'arrow' %}</a>{% endif %}
+        {% if section.settings.secondary_label != blank %}<a class="g-btn g-btn--light" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label }}</a>{% endif %}
+      </div>
+      <div class="g-hero-points"><span>{% render 'icon', name: 'check' %} {{ section.settings.point_1 }}</span><span>{% render 'icon', name: 'check' %} {{ section.settings.point_2 }}</span><span>{% render 'icon', name: 'check' %} {{ section.settings.point_3 }}</span></div>
+    </div>
+    <div class="g-hero-media">
+      {% if section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 2200 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '720,1100,1600,2200', sizes: '(max-width: 850px) 100vw, 54vw', alt: section.settings.heading }}
+      {% else %}
+        <img src="{{ 'grovera-hero.jpg' | asset_url }}" alt="GROVERA smart agriculture" loading="eager" fetchpriority="high">
+      {% endif %}
+      <div class="g-media-shade"></div>
+      <div class="g-hero-stat g-stat-1"><small>{% if request.locale.iso_code == 'ar' %}تجربة تسوق{% else %}Shopping{% endif %}</small><strong>{% if request.locale.iso_code == 'ar' %}أوضح وأسرع{% else %}Clear & fast{% endif %}</strong></div>
+      <div class="g-hero-stat g-stat-2"><span class="g-stat-leaf">{% render 'icon', name: 'leaf' %}</span><div><small>GROVERA</small><strong>{% if request.locale.iso_code == 'ar' %}زراعة أذكى{% else %}Smarter agriculture{% endif %}</strong></div></div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{"name":"GROVERA Hero","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"SMART AGRICULTURAL SOLUTIONS"},{"type":"richtext","id":"heading","label":"Heading","default":"<p>كل احتياجات الزراعة، <em>في مكان واحد.</em></p>"},{"type":"textarea","id":"text","label":"Text","default":"متجر متكامل للبذور والأسمدة والمبيدات وأنظمة الري والأدوات الزراعية، بتجربة شراء حديثة وواضحة."},{"type":"image_picker","id":"image","label":"Hero image"},{"type":"text","id":"primary_label","label":"Primary button","default":"تسوق الآن"},{"type":"url","id":"primary_link","label":"Primary link"},{"type":"text","id":"secondary_label","label":"Secondary button","default":"استكشف الأقسام"},{"type":"url","id":"secondary_link","label":"Secondary link"},{"type":"text","id":"point_1","label":"Point 1","default":"توصيل داخل الإمارات"},{"type":"text","id":"point_2","label":"Point 2","default":"دفع آمن عبر Shopify"},{"type":"text","id":"point_3","label":"Point 3","default":"دعم مباشر"},{"type":"checkbox","id":"compact","label":"Compact height","default":false}],"presets":[{"name":"GROVERA Hero"}]}
+{% endschema %}

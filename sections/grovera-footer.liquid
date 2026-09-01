@@ -1,0 +1,21 @@
+<footer class="g-footer">
+  <div class="g-container">
+    <div class="g-footer-topline"><span>GROVERA</span><strong>{% if request.locale.iso_code == 'ar' %}حلول زراعية ذكية لمستقبل مستدام{% else %}Smart agricultural solutions for a sustainable future{% endif %}</strong></div>
+    <div class="g-footer-main">
+      <div class="g-footer-brand">
+        {% if settings.logo != blank %}{{ settings.logo | image_url: width: 520 | image_tag: loading:'lazy', alt:'GROVERA' }}{% else %}<img src="{{ 'grovera-logo.png' | asset_url }}" alt="GROVERA" loading="lazy">{% endif %}
+        <p>{{ section.settings.about }}</p>
+        <div class="g-footer-contact">
+          {% if settings.whatsapp_number != blank %}<a class="g-whatsapp" href="https://wa.me/{{ settings.whatsapp_number | remove:'+' | remove:' ' }}" target="_blank" rel="noopener">WhatsApp · {{ settings.whatsapp_label }}</a>{% endif %}
+          {% if shop.email != blank %}<a href="mailto:{{ shop.email }}">{{ shop.email }}</a>{% endif %}
+        </div>
+      </div>
+      {% for block in section.blocks %}<div class="g-footer-col" {{ block.shopify_attributes }}><h4>{{ block.settings.heading }}</h4><nav>{% for link in block.settings.menu.links %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}</nav></div>{% endfor %}
+      <div class="g-footer-col"><h4>{% if request.locale.iso_code == 'ar' %}السياسات{% else %}Policies{% endif %}</h4><nav>{% if shop.privacy_policy != blank %}<a href="{{ shop.privacy_policy.url }}">{{ shop.privacy_policy.title }}</a>{% endif %}{% if shop.refund_policy != blank %}<a href="{{ shop.refund_policy.url }}">{{ shop.refund_policy.title }}</a>{% endif %}{% if shop.shipping_policy != blank %}<a href="{{ shop.shipping_policy.url }}">{{ shop.shipping_policy.title }}</a>{% endif %}{% if shop.terms_of_service != blank %}<a href="{{ shop.terms_of_service.url }}">{{ shop.terms_of_service.title }}</a>{% endif %}</nav></div>
+    </div>
+    <div class="g-footer-bottom"><span>© {{ 'now' | date: '%Y' }} GROVERA. {% if request.locale.iso_code == 'ar' %}جميع الحقوق محفوظة.{% else %}All rights reserved.{% endif %}</span><span>{{ localization.country.name }} · {{ localization.country.currency.iso_code }}</span></div>
+  </div>
+</footer>
+{% schema %}
+{"name":"GROVERA Footer","max_blocks":3,"settings":[{"type":"textarea","id":"about","label":"About","default":"حلول زراعية ذكية لمستقبل مستدام. متجر متكامل للمنتجات والمستلزمات الزراعية."}],"blocks":[{"type":"menu","name":"Footer menu","settings":[{"type":"text","id":"heading","label":"Heading","default":"روابط مهمة"},{"type":"link_list","id":"menu","label":"Menu"}]}]}
+{% endschema %}

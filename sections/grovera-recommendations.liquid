@@ -1,0 +1,9 @@
+<section class="g-section g-section--soft g-recommendations" data-product-recommendations data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.limit }}">
+  <div class="g-container">
+    {% if recommendations.performed? and recommendations.products_count > 0 %}
+      <div class="g-section-head"><div><span class="g-kicker">YOU MAY ALSO LIKE</span><h2>{% if request.locale.iso_code == 'ar' %}قد يعجبك أيضاً{% else %}You may also like{% endif %}</h2></div></div>
+      <div class="g-products-grid">{% for product in recommendations.products %}{% render 'product-card', product: product %}{% endfor %}</div>
+    {% endif %}
+  </div>
+</section>
+{% schema %}{"name":"GROVERA Recommendations","settings":[{"type":"range","id":"limit","label":"Products","min":4,"max":12,"step":1,"default":8}],"presets":[{"name":"GROVERA Recommendations"}]}{% endschema %}

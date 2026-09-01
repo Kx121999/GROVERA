@@ -1,0 +1,23 @@
+<section class="g-section{% if section.settings.section_style == 'soft' %} g-section--soft{% elsif section.settings.section_style == 'dark' %} g-section--dark{% endif %}" data-section-id="{{ section.id }}">
+  <div class="g-container">
+    <div class="g-section-head">
+      <div><span class="g-kicker">{{ section.settings.eyebrow }}</span><h2>{{ section.settings.heading }}</h2>{% if section.settings.text != blank %}<p>{{ section.settings.text }}</p>{% endif %}</div>
+      {% if section.settings.collection != blank %}<a class="g-text-link" href="{{ section.settings.collection.url }}">{% if request.locale.iso_code == 'ar' %}عرض الكل{% else %}View all{% endif %} {% render 'icon', name:'arrow' %}</a>{% endif %}
+    </div>
+    <div class="g-products-grid">
+      {% if section.settings.collection != blank and section.settings.collection.products_count > 0 %}
+        {% for product in section.settings.collection.products limit: section.settings.limit %}{% render 'product-card', product: product %}{% endfor %}
+      {% else %}
+        {% assign demo_images = 'product-seeds.png,product-fertilizer.png,product-protection.png,product-irrigation.png' | split: ',' %}
+        {% assign demo_titles_ar = 'بذور هجينة مختارة,سماد متوازن للنبات,حلول حماية المحاصيل,مؤقت ري ذكي' | split: ',' %}
+        {% assign demo_titles_en = 'Selected hybrid seeds,Balanced plant fertilizer,Crop protection solutions,Smart irrigation timer' | split: ',' %}
+        {% for img in demo_images %}
+          <article class="g-product-card g-demo-product"><div class="g-product-media-wrap"><div class="g-product-media"><img src="{{ img | asset_url }}" alt="GROVERA" loading="lazy"></div></div><div class="g-product-info"><span class="g-product-type">GROVERA</span><h3>{% if request.locale.iso_code == 'ar' %}{{ demo_titles_ar[forloop.index0] }}{% else %}{{ demo_titles_en[forloop.index0] }}{% endif %}</h3><div class="g-price g-card-price"><strong>{% if request.locale.iso_code == 'ar' %}اربط المجموعة من محرر القالب{% else %}Select a collection in Theme Editor{% endif %}</strong></div><div class="g-product-actions"><span class="g-card-add is-disabled">{% if request.locale.iso_code == 'ar' %}منتج تجريبي{% else %}Demo product{% endif %}</span></div></div></article>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{"name":"GROVERA Product Row","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"FEATURED PRODUCTS"},{"type":"text","id":"heading","label":"Heading","default":"منتجات مختارة لك"},{"type":"textarea","id":"text","label":"Supporting text"},{"type":"collection","id":"collection","label":"Collection"},{"type":"range","id":"limit","label":"Products shown","min":4,"max":12,"step":1,"default":8},{"type":"select","id":"section_style","label":"Background","default":"soft","options":[{"value":"plain","label":"White"},{"value":"soft","label":"Soft"},{"value":"dark","label":"Dark"}]}],"presets":[{"name":"GROVERA Product Row"}]}
+{% endschema %}
