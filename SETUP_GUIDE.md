@@ -1,16 +1,32 @@
-# GOLDEN ROOTS V6 — Setup Guide
+# GOLDEN ROOTS V7 — Shopify Setup Guide
 
-1. Upload `GOLDEN_ROOTS_Shopify_Theme_V6.zip` in Shopify → Online Store → Themes → Add theme → Upload zip.
-2. Keep it unpublished while reviewing.
-3. Open Theme settings → Brand and upload the approved GOLDEN ROOTS logo.
-4. Add products, collections, prices, inventory and real images.
-5. Configure UAE shipping, VAT, payment provider, WhatsApp number, store policies and domain.
-6. Build the main menu with nested collections to populate the mega menu.
-7. Review Arabic and English copy in Shopify Translate & Adapt or your translation workflow.
-8. Test search, quick view, cart, variants, checkout, mobile navigation and account flow before publishing.
+## 1. Upload theme
+Online Store → Themes → Add theme → Upload ZIP.
 
-The static GitHub Pages preview is not the live Shopify checkout.
+## 2. Store basics
+- Store currency: AED
+- Add official domain
+- Add Arabic and English markets/languages as required
+- Add company contact details and WhatsApp number in Theme Settings
 
+## 3. Catalog
+Import or create real products. Recommended base fields: Title, Description, Vendor, Product Type, Tags, SKU, Price, Compare-at price, Inventory tracking, Images and Variants.
 
-## Official logo integration (V6)
-The approved GOLDEN ROOTS green/gold logo is bundled in the theme and used automatically in the header, mobile navigation, footer, favicon/brand mark, hero brand seal and Organization structured data.
+Recommended tags used by the theme: `new`, `bestseller`.
+
+## 4. Collections
+Create the final collections (Seeds, Fertilizers, Pesticides, Irrigation, Tools, Greenhouse supplies, etc.) and attach them to navigation. Configure Shopify Search & Discovery filters.
+
+## 5. Cart conversion
+Theme Settings → Commerce V7:
+- Free shipping threshold
+- Low-stock threshold
+- Discount-code field
+- Order notes
+- Optional cart upsell collection
+
+## 6. Shipping, tax, checkout and payments
+Configure these from Shopify Admin according to the company's actual UAE commercial setup. Do not hard-code rates or tax percentages in theme files.
+
+## 7. Test before launch
+Run test orders for desktop and mobile, including variants, discounts, cart updates, shipping address, checkout, payment, order confirmation and customer emails.

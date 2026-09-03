@@ -1,0 +1,23 @@
+# GOLDEN ROOTS — V7 Launch Checklist
+
+- [ ] Real products imported
+- [ ] Product images uploaded
+- [ ] Prices and compare-at prices reviewed
+- [ ] SKU values reviewed
+- [ ] Inventory tracking enabled where required
+- [ ] Collections created and menu linked
+- [ ] Shopify Search & Discovery filters configured
+- [ ] WhatsApp number added
+- [ ] Support email added
+- [ ] UAE shipping zones/rates configured
+- [ ] Tax settings reviewed by the business
+- [ ] Payment provider activated
+- [ ] Discount codes tested
+- [ ] Free shipping threshold verified
+- [ ] Customer accounts configured
+- [ ] Policies added
+- [ ] Test order completed on mobile
+- [ ] Test order completed on desktop
+- [ ] Arabic layout reviewed
+- [ ] English layout reviewed
+- [ ] Domain connected

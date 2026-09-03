@@ -1,0 +1,10 @@
+GOLDEN ROOTS V7 QA REPORT
+===========================
+HTML pages: 15
+Shopify sections: 27
+Shopify templates: 12
+Embedded schemas parsed: 27
+JSON + section schema parse: FAIL
+Brand spelling scan: PASS
+Issues: 1
+Schema golden-roots-main-product.liquid: Expecting value: line 1 column 107 (char 106)

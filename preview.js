@@ -47,7 +47,7 @@
   const rev=$$('[data-reveal]');if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});rev.forEach(el=>io.observe(el))}else rev.forEach(el=>el.classList.add('is-visible'));
   // nav active class
   const path=location.pathname.split('/').pop()||'index.html';$$('.preview-brand-menu a').forEach(a=>{const href=(a.getAttribute('href')||'').split('#')[0];if(href===path)a.classList.add('is-active')});$$('.g-mobile-dock a').forEach(a=>{const href=(a.getAttribute('href')||'').split('#')[0];if(href===path)a.classList.add('is-active')});
-  // V6 premium header state
+  // V7 premium header state
   const siteHeader=$('[data-site-header]');
   const setHeaderState=()=>siteHeader?.classList.toggle('is-scrolled',window.scrollY>24);
   setHeaderState();window.addEventListener('scroll',setHeaderState,{passive:true});
