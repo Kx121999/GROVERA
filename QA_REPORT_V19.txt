@@ -1,0 +1,32 @@
+GOLDEN ROOTS V19 QA / STRESS REPORT
+====================================
+Status: PASS
+HTML pages: 25
+Catalog products: 26
+Catalog categories: 6
+Automated errors: 0
+Automated warnings: 0
+Browser capability: UNAVAILABLE (exit 124)
+
+PASS CHECKS
+-----------
+- HTML shell / local asset checks: 25 pages
+- Catalog integrity: 26 products / 6 categories
+- JavaScript syntax: app-v19.js
+- JavaScript syntax: catalog-data.js
+- JavaScript syntax: catalog-loader.js
+- JavaScript syntax: sw.js
+- CSS brace balance: PASS
+- Forbidden integrations / banned product blocks: PASS
+- Feature-density wording audit: PASS
+- HTTP smoke test: 10 routes/assets
+
+ERRORS
+------
+- None
+
+WARNINGS / LIMITS
+-----------------
+- Checkout, contact and B2B remain local simulations until a backend is connected.
+- Browser-rendered visual QA is only claimed if the environment can run Chromium reliably; this build primarily uses structural, syntax, catalog, route and HTTP smoke tests.
+- Real payment, delivery rates and company-approved legal wording remain outside this standalone phase.
