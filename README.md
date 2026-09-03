@@ -1,4 +1,4 @@
-# GOLDEN ROOTS — Shopify Theme V11
+# GOLDEN ROOTS — Live Commerce Engine V12
 
 **جولدن روتس للزراعة ومستلزماتها**
 
@@ -13,3 +13,7 @@
 
 ## V11
 Catalog Intelligence adds compare, profile-specific product templates, complementary products, bundles, vendor pages, merchandising metafields, native quantity pricing UI, search synonyms, saved carts and zero-result recovery.
+
+
+## V12
+Live catalog architecture, automatic product profiles, richer Shopify media, smart cart matching, B2B MOQ, UAE ETA guidance, and catalog fallbacks are implemented. See `CHANGELOG_V12.md`, `V12_CATALOG_DATA_SETUP.md`, and `V12_ADMIN_WORKFLOW.md`.

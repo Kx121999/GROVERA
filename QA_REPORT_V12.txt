@@ -1,0 +1,29 @@
+GOLDEN ROOTS V12 QA REPORT
+===========================
+Status: PASS
+HTML pages: 20
+Shopify sections: 38
+Shopify templates: 22
+Liquid schemas parsed: 38
+Errors: 0
+Warnings: 0
+
+V12 checks
+- Live Shopify collection catalog wired to homepage
+- Menu-driven header + automatic collection fallback
+- Auto product profile + irrigation/greenhouse profiles
+- Image/video/external-video/3D media rendering
+- Variant media synchronization
+- Smart cart matching
+- Per-product B2B MOQ
+- UAE ETA configuration
+- Catalog fallback safeguards
+- Customer account utility layer
+- V11 compare/bundles/search/brands/saved cart retained
+- Banned legacy product content absent
+
+ERRORS
+None
+
+WARNINGS
+None
