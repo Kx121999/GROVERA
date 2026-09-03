@@ -1,0 +1,9 @@
+GOLDEN ROOTS V14 QA
+====================
+Static HTML pages: 22
+Shopify sections: 40
+Shopify templates: 24
+Liquid schemas parsed: 40
+JavaScript syntax: PASS
+Issues: 0
+STATUS: PASS — no issues detected in automated QA.

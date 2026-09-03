@@ -1,3 +1,9 @@
+# GOLDEN ROOTS — V14 Ultra Premium Commerce
+
+**جولدن روتس للزراعة ومستلزماتها**
+
+V14 adds the final premium UI/UX design system on top of V13 functionality.
+
 # GOLDEN ROOTS — Farm Commerce & Retention V13
 
 **جولدن روتس للزراعة ومستلزماتها**
