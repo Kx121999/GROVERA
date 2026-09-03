@@ -7,7 +7,7 @@
   const isAR=(document.documentElement.lang||'').toLowerCase().startsWith('ar');
   const money=cents=>{try{return new Intl.NumberFormat(document.documentElement.lang||'en',{style:'currency',currency:cfg.currency||body.dataset.currency||'AED'}).format((Number(cents)||0)/100)}catch(e){return ((Number(cents)||0)/100).toFixed(2)+' '+(cfg.currency||'AED')}};
   const esc=s=>String(s??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
-  const toast=msg=>{let t=$('.g-toast');if(!t){t=document.createElement('div');t.className='g-toast';document.body.appendChild(t)}t.textContent=msg;t.classList.add('is-visible');clearTimeout(t._timer);t._timer=setTimeout(()=>t.classList.remove('is-visible'),2200)};
+  const toast=msg=>{let t=$('.g-toast');if(!t){t=document.createElement('div');t.className='g-toast';document.body.appendChild(t)}t.textContent=msg;t.setAttribute('role','status');t.setAttribute('aria-live','polite');t.classList.add('is-visible');clearTimeout(t._timer);t._timer=setTimeout(()=>t.classList.remove('is-visible'),2200)};
 
   const backdrop=$('[data-backdrop]'), search=$('[data-search-overlay]'), cart=$('[data-cart-drawer]'), menu=$('[data-mobile-menu]'), wishlistDrawer=$('[data-wishlist-drawer]'), filterDrawer=$('[data-filter-drawer]'), qvModal=$('[data-quick-view-modal]'), qvContent=$('[data-quick-view-content]');
   const layers=[search,cart,menu,wishlistDrawer,filterDrawer].filter(Boolean);
@@ -44,13 +44,13 @@
   const mainForm=$('[data-product-form]');$('[data-sticky-add]')?.addEventListener('click',()=>mainForm?.requestSubmit());if(mainForm&&'IntersectionObserver'in window){const sticky=$('[data-sticky-atc]');new IntersectionObserver(entries=>sticky?.classList.toggle('is-visible',!entries[0].isIntersecting),{threshold:.15}).observe(mainForm)}
 
   // Shopify cart API
-  async function getCart(){const r=await fetch(route('cart.js'),{headers:{Accept:'application/json'}});if(!r.ok)throw new Error('Cart fetch failed');return r.json()}
+  async function getCart(){const r=await fetch(route('cart.js'),{headers:{Accept:'application/json'},credentials:'same-origin'});if(!r.ok)throw new Error('Cart fetch failed');return r.json()}
   function shippingState(data,prefix=''){const threshold=Number(cfg.freeShipping||0),remaining=Math.max(0,threshold-data.total_price),pct=threshold?Math.min(100,Math.round((data.total_price/threshold)*100)):0;return{remaining,pct,msg:remaining>0?(isAR?`أضف ${money(remaining)} للوصول إلى حد الشحن المجاني`:`Add ${money(remaining)} to reach free shipping`):(isAR?'وصلت إلى حد الشحن المجاني':'You reached free shipping')}}
   function renderShippingProgress(data){const threshold=Number(cfg.freeShipping||0);const wrap=$('[data-shipping-progress]'),msg=$('[data-shipping-message]'),bar=$('[data-shipping-progress-bar]');if(wrap){wrap.hidden=!threshold;if(threshold){const st=shippingState(data);if(msg)msg.textContent=st.msg;bar?.style.setProperty('--progress',st.pct+'%')}}const pWrap=$('[data-page-shipping-progress]'),pMsg=$('[data-page-shipping-message]'),pBar=$('[data-page-shipping-bar]');if(pWrap){pWrap.hidden=!threshold;if(threshold){const st=shippingState(data);if(pMsg)pMsg.textContent=st.msg;pBar?.style.setProperty('--progress',st.pct+'%')}}}
   function renderCart(data){$$('[data-cart-count]').forEach(el=>el.textContent=data.item_count);$('[data-cart-total]')?.replaceChildren(document.createTextNode(money(data.total_price)));renderShippingProgress(data);const items=$('[data-cart-items]');if(!items)return;if(!data.items.length){items.innerHTML=`<div class="g-empty-state"><div class="g-empty-icon">✓</div><h4>${isAR?'السلة فارغة':'Your cart is empty'}</h4><p>${isAR?'ابدأ بإضافة المنتجات التي تحتاجها.':'Add the products you need to get started.'}</p></div>`;return}items.innerHTML=data.items.map(i=>`<div class="g-drawer-item" data-cart-key="${esc(i.key)}"><a class="g-drawer-thumb" href="${esc(i.url)}">${i.image?`<img src="${esc(i.image)}" alt="${esc(i.product_title)}">`:''}</a><div><a class="g-drawer-title" href="${esc(i.url)}">${esc(i.product_title)}</a>${i.variant_title&&i.variant_title!=='Default Title'?`<small>${esc(i.variant_title)}</small>`:''}<span>${money(i.final_price)}</span><div class="g-drawer-item-controls"><button type="button" data-cart-dec aria-label="minus">−</button><span>${i.quantity}</span><button type="button" data-cart-inc aria-label="plus">+</button><button class="g-drawer-remove" type="button" data-cart-remove>${isAR?'حذف':'Remove'}</button></div></div><strong>${money(i.final_line_price)}</strong></div>`).join('')}
   function renderCartPage(data){$('[data-cart-page-total]')?.replaceChildren(document.createTextNode(money(data.total_price)));renderShippingProgress(data);const rows=$$('[data-cart-page-row]');rows.forEach(row=>{const item=data.items.find(i=>i.key===row.dataset.cartKey);if(!item){row.remove();return}const inp=$('[data-cart-page-qty]',row),txt=$('[data-row-qty-text]',row),line=$('[data-cart-page-line-total]',row);if(inp)inp.value=item.quantity;if(txt)txt.textContent=item.quantity;if(line)line.textContent=money(item.final_line_price)});if(!data.item_count&&$('[data-cart-page]'))location.reload()}
   async function changeCart(id,quantity){const r=await fetch(route('cart/change.js'),{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({id,quantity:Number(quantity)})});if(!r.ok)throw new Error('Cart update failed');const data=await r.json();renderCart(data);renderCartPage(data);return data}
-  async function refreshCart(){try{const data=await getCart();renderCart(data);renderCartPage(data);return data}catch(err){console.warn(err)}}
+  async function refreshCart(){try{const data=await getCart();renderCart(data);renderCartPage(data);return data}catch(err){void err}}
   $('[data-cart-items]')?.addEventListener('click',async e=>{const row=e.target.closest('[data-cart-key]');if(!row)return;const key=row.dataset.cartKey,qty=Number(row.querySelector('.g-drawer-item-controls span')?.textContent||1);try{if(e.target.closest('[data-cart-inc]'))await changeCart(key,qty+1);else if(e.target.closest('[data-cart-dec]'))await changeCart(key,Math.max(0,qty-1));else if(e.target.closest('[data-cart-remove]'))await changeCart(key,0)}catch(err){toast(isAR?'تعذر تحديث السلة':'Could not update cart')}});
   $('[data-cart-page]')?.addEventListener('click',async e=>{const row=e.target.closest('[data-cart-page-row]');if(!row)return;const key=row.dataset.cartKey,inp=$('[data-cart-page-qty]',row),qty=Number(inp?.value||1);try{if(e.target.closest('[data-cart-page-inc]'))await changeCart(key,qty+1);else if(e.target.closest('[data-cart-page-dec]'))await changeCart(key,Math.max(0,qty-1));else if(e.target.closest('[data-cart-page-remove]'))await changeCart(key,0)}catch(err){toast(isAR?'تعذر تحديث السلة':'Could not update cart')}});
   $('[data-cart-page]')?.addEventListener('change',async e=>{if(!e.target.matches('[data-cart-page-qty]'))return;const row=e.target.closest('[data-cart-page-row]');if(!row)return;try{await changeCart(row.dataset.cartKey,Math.max(0,Number(e.target.value)||0))}catch(err){toast(isAR?'تعذر تحديث السلة':'Could not update cart')}});
@@ -82,7 +82,7 @@
 
   // Motion + sticky header
   if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('g-motion-ready');const els=$$('.g-section,.g-brand-strip,.g-hero');const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('g-revealed');io.unobserve(en.target)}}),{threshold:.06,rootMargin:'0px 0px -30px'});els.forEach(el=>io.observe(el))}
-  const h=$('[data-site-header]'),scrollHeader=()=>h?.classList.toggle('is-scrolled',window.scrollY>24);scrollHeader();window.addEventListener('scroll',scrollHeader,{passive:true});
+  const h=$('[data-site-header]'),scrollHeader=()=>h?.classList.toggle('is-scrolled',window.scrollY>24);scrollHeader();let scrollTick=false;window.addEventListener('scroll',()=>{if(scrollTick)return;scrollTick=true;requestAnimationFrame(()=>{scrollHeader();scrollTick=false})},{passive:true});
 
   // V8: wishlist add-to-cart + full wishlist page
   async function addWishlistHandle(handle){try{const r=await fetch(route(`products/${encodeURIComponent(handle)}.js`),{headers:{Accept:'application/json'}});if(!r.ok)throw new Error('product');const p=await r.json(),v=(p.variants||[]).find(x=>x.available);if(!v)throw new Error('stock');const fd=new FormData();fd.append('id',v.id);fd.append('quantity','1');const ar=await fetch(route('cart/add.js'),{method:'POST',body:fd,headers:{Accept:'application/json'}});if(!ar.ok)throw new Error('cart');await refreshCart();toast(isAR?'تمت الإضافة إلى السلة':'Added to cart')}catch(e){toast(isAR?'المنتج غير متاح للإضافة حالياً':'Product is not available to add right now')}}
@@ -96,5 +96,26 @@
   variantSelect?.addEventListener('change',syncProductWhatsapp);syncProductWhatsapp();
   // V8: prefill wholesale quote from ?product= handle
   const quote=$('[data-quote-body]');if(quote){const handle=new URLSearchParams(location.search).get('product');if(handle&&!quote.value)quote.value=isAR?`أرغب في طلب كمية من المنتج: ${handle}`:`I would like a bulk quote for: ${handle}`;}
+
+
+  // V9: keyboard-safe modal focus management
+  const focusableSelector='a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
+  let v9LastFocus=null;
+  const v9ActiveDialog=()=>[qvModal,$('[data-image-zoom]'),...layers].find(el=>el&&(el.classList.contains('is-open')||el.getAttribute('aria-hidden')==='false'));
+  document.addEventListener('click',e=>{const trigger=e.target.closest('[data-search-open],[data-cart-open],[data-menu-open],[data-wishlist-open],[data-filter-open],[data-quick-view-handle],[data-zoom-open]');if(trigger)v9LastFocus=trigger;},true);
+  document.addEventListener('keydown',e=>{
+    const dialog=v9ActiveDialog();if(!dialog)return;
+    if(e.key==='Tab'){
+      const items=$$(focusableSelector,dialog).filter(el=>el.offsetParent!==null);
+      if(!items.length){e.preventDefault();dialog.focus?.();return}
+      const first=items[0],last=items[items.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+    }
+    if(e.key==='Escape')setTimeout(()=>v9LastFocus?.focus?.(),0);
+  });
+  // V9: lazy-load below-the-fold iframes and decode images without blocking interaction
+  $$('iframe:not([loading])').forEach(f=>f.setAttribute('loading','lazy'));
+  $$('img:not([decoding])').forEach(i=>i.setAttribute('decoding','async'));
 
 })();
