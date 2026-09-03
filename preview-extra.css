@@ -58,3 +58,6 @@ body{padding-bottom:0}.g-search-overlay,.g-backdrop{display:none}.g-search-overl
 .preview-note{background:#062f17;color:#efd070;letter-spacing:.2px}.v7-header + main{position:relative}
 
 .g-v8-account-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.g-v8-account-preview .g-v8-review-empty{align-items:flex-start}@media(max-width:760px){.g-v8-account-preview{grid-template-columns:1fr}}
+
+/* V15 production audit: streamlined cards and safer focus */
+.g-product-card .pv-quick-view,.g-product-card .g-v11-compare-btn,.g-product-card .g-round-link{display:none!important}.g-product-card:focus-within{outline:2px solid rgba(194,157,54,.45);outline-offset:3px}

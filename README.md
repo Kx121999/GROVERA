@@ -1,9 +1,3 @@
-# GOLDEN ROOTS — V14 Ultra Premium Commerce
-
-**جولدن روتس للزراعة ومستلزماتها**
-
-V14 adds the final premium UI/UX design system on top of V13 functionality.
-
 # GOLDEN ROOTS — Farm Commerce & Retention V13
 
 **جولدن روتس للزراعة ومستلزماتها**
@@ -27,3 +21,7 @@ Live catalog architecture, automatic product profiles, richer Shopify media, sma
 
 ## V13
 Farm Quick Order, saved farm lists, Buy Again, tier/loyalty account UI, native selling-plan subscriptions, and Request Quote Cart are implemented. See `CHANGELOG_V13.md` and `V13_RETENTION_SETUP.md`.
+
+
+## V15 Production Audit
+V15 consolidates the storefront UI, removes customer-facing implementation copy, safeguards loyalty/reviews, improves accessibility and separates code readiness from business launch readiness. See `CHANGELOG_V15.md` and `V15_LAUNCH_BLOCKERS.md`.
