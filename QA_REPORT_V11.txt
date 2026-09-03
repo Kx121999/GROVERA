@@ -1,0 +1,28 @@
+GOLDEN ROOTS V11 QA REPORT
+===========================
+Status: PASS
+HTML pages: 20
+Shopify sections: 36
+Shopify templates: 20
+Liquid schemas parsed: 36
+Errors: 0
+Warnings: 0
+
+V11 checks
+- Compare page + compare tray
+- Product profile templates (seeds/fertilizers/pesticides/tools)
+- Product/collection metafield merchandising
+- Complementary recommendations
+- Bundle builder
+- Native quantity price-break display
+- Search synonym mapping + recovery
+- Brand/vendor page
+- Saved cart
+- Empty specification snapshot suppressed when no metafields exist
+- Banned legacy product content absent
+
+ERRORS
+None
+
+WARNINGS
+None

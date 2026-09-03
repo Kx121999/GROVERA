@@ -1,30 +1,15 @@
-# GOLDEN ROOTS — Shopify Theme V9
+# GOLDEN ROOTS — Shopify Theme V11
 
 **جولدن روتس للزراعة ومستلزماتها**
 
-V9 focuses on store operations and customer experience without adding Google/Meta tracking.
+هذه النسخة هي الإصدار المصحح بعد مراجعة V10 بالكامل. أعيد بناء صفحات المعاينة على الهيكل المستقر، مع الحفاظ على مزايا V10: القائمة البصرية، Smart Finder، Search V3، تجربة المنتج والسلة، B2B، المفضلة، Recently Viewed وتجربة الموبايل.
 
-## V9 highlights
-- Product states: New / Best seller / Sale / Preorder / Coming soon / Sold out
-- Native Shopify variant, inventory, cart and checkout flow from the previous release
-- Dynamic enabled payment icons
-- Optional Cash on Delivery note (display only; COD must be enabled in Shopify Admin)
-- UAE emirate selector before checkout (informational; Shopify checkout remains source of truth for rates)
-- Enriched product WhatsApp message with selected variant, price and URL
-- B2B / farm bulk-quote page template using Shopify contact form
-- Reviews section with Shopify App Blocks + standard rating metafield support
-- Full wishlist page + add-to-cart from wishlist
-- Customer Account links when Shopify Customer Accounts are enabled
-- Cart discount, notes, upsells and free-shipping progress
-- Arabic RTL / English LTR
+- `GOLDEN_ROOTS_GITHUB_PAGES_V10.1_FIXED.zip`: معاينة Static نظيفة.
+- `GOLDEN_ROOTS_Shopify_Theme_V10.1_FIXED.zip`: قالب المتجر للرفع.
+- `GOLDEN_ROOTS_V10.1_FULL_SOURCE.zip`: المصدر الكامل والتقارير.
 
-## Important
-Theme code cannot activate payment gateways, COD, shipping profiles, taxes, Customer Accounts or a reviews app by itself. Those settings remain in Shopify Admin. V9 provides the storefront UI and integration points for them.
+راجع `QA_REPORT_V10.1.txt` و `FIXES_V10.1.md` للتفاصيل.
 
 
-## V9 launch hardening
-See `CHANGELOG_V9.md`, `PERFORMANCE_V9.md`, and `SECURITY_NOTES_V9.md`.
-
-
-## V10
-Signature Commerce UX adds Smart Finder, Search V3, visual mega menu, Quick Buy, sticky collection controls, inline B2B quoting, Save for Later and customer reorder (legacy accounts).
+## V11
+Catalog Intelligence adds compare, profile-specific product templates, complementary products, bundles, vendor pages, merchandising metafields, native quantity pricing UI, search synonyms, saved carts and zero-result recovery.

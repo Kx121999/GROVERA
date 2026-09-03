@@ -1,0 +1,10 @@
+GOLDEN ROOTS V10.1 QA REPORT
+==================================
+Static HTML pages: 18
+Shopify sections: 32
+Shopify JSON templates: 15
+Liquid schemas parsed: 32
+Errors found: 0
+Warnings: 0
+
+RESULT: PASS
