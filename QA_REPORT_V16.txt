@@ -1,0 +1,14 @@
+GOLDEN ROOTS V16 QA
+====================
+Static HTML pages: 23
+Catalog products: 26
+Categories: 6
+Standalone core: PASS
+JavaScript syntax: PASS
+Internal links/assets: PASS
+Language modes: AR RTL + EN LTR
+Tracking integrations: NOT ADDED (by request)
+Live payment/backend: intentionally not active
+
+Issues:
+- None detected by automated static QA.
