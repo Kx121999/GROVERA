@@ -1,61 +1,51 @@
 (() => {
-  const q = (s, root=document) => root.querySelector(s);
-  const qa = (s, root=document) => [...root.querySelectorAll(s)];
-  const backdrop = q('.g-backdrop');
-  const search = q('.g-search-overlay');
-  const cart = q('.g-cart-drawer');
-  const wishlist = q('.g-wishlist-drawer');
-  const mobile = q('.g-mobile-menu');
+  'use strict';
+  const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+  const backdrop=$('.g-backdrop'), search=$('.g-search-overlay'), cart=$('.g-cart-drawer'), wishlist=$('.g-wishlist-drawer'), mobile=$('.g-mobile-menu');
+  const layers=[search,cart,wishlist,mobile].filter(Boolean);
+  const progress=document.createElement('div');progress.className='pv-scroll-progress';document.body.appendChild(progress);window.addEventListener('scroll',()=>{const d=document.documentElement;const pct=d.scrollHeight>d.clientHeight?(d.scrollTop/(d.scrollHeight-d.clientHeight))*100:0;progress.style.setProperty('--scroll',pct+'%')},{passive:true});
+  const state={cart:JSON.parse(localStorage.getItem('golden_roots_preview_cart_v5')||'[]'),wishlist:JSON.parse(localStorage.getItem('golden_roots_preview_wishlist_v5')||'[]')};
+  const products=[
+    {id:'seeds',title:'بذور هجينة مختارة',type:'بذور',price:85,old:105,img:'assets/product-seeds.png'},
+    {id:'fertilizer',title:'سماد متوازن للنبات',type:'أسمدة',price:65,img:'assets/product-fertilizer.png'},
+    {id:'protection',title:'حلول حماية المحاصيل',type:'حماية المحاصيل',price:115,old:135,img:'assets/product-protection.png'},
+    {id:'irrigation',title:'مؤقت ري ذكي',type:'أنظمة الري',price:149,img:'assets/product-irrigation.png'},
+    {id:'seeds-2',title:'بذور خضروات مختارة',type:'بذور',price:79,img:'assets/product-seeds.png'},
+    {id:'nutrition',title:'مغذيات نباتية',type:'تغذية نباتية',price:59,img:'assets/product-fertilizer.png'},
+    {id:'pest',title:'منتج مكافحة آفات',type:'مكافحة الآفات',price:99,img:'assets/product-protection.png'},
+    {id:'controller',title:'وحدة تحكم ري',type:'أنظمة الري',price:189,img:'assets/product-irrigation.png'}
+  ];
+  const save=()=>{localStorage.setItem('golden_roots_preview_cart_v5',JSON.stringify(state.cart));localStorage.setItem('golden_roots_preview_wishlist_v5',JSON.stringify(state.wishlist));syncCounts()};
+  function closeAll(){layers.forEach(el=>{el?.classList.remove('is-open');el?.setAttribute('aria-hidden','true')});backdrop?.classList.remove('is-open');document.documentElement.style.overflow=''}
+  function open(el){closeAll();el?.classList.add('is-open');el?.setAttribute('aria-hidden','false');backdrop?.classList.add('is-open');document.documentElement.style.overflow='hidden';if(el===cart)renderCart();if(el===wishlist)renderWishlist()}
+  $$('[data-search-open]').forEach(b=>b.addEventListener('click',()=>{open(search);setTimeout(()=>$('[data-preview-search]')?.focus(),80)}));$$('[data-search-close]').forEach(b=>b.addEventListener('click',closeAll));
+  $$('[data-cart-open]').forEach(b=>b.addEventListener('click',()=>open(cart)));$$('[data-cart-close]').forEach(b=>b.addEventListener('click',closeAll));
+  $$('[data-wishlist-open]').forEach(b=>b.addEventListener('click',()=>open(wishlist)));$$('[data-wishlist-close]').forEach(b=>b.addEventListener('click',closeAll));
+  $$('[data-menu-open]').forEach(b=>b.addEventListener('click',()=>open(mobile)));$$('[data-menu-close]').forEach(b=>b.addEventListener('click',closeAll));backdrop?.addEventListener('click',closeAll);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+  const toast=msg=>{let el=$('.pv-toast');if(!el){el=document.createElement('div');el.className='pv-toast';document.body.appendChild(el)}el.textContent=msg;el.classList.add('is-visible');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('is-visible'),1900)};
+  function syncCounts(){const cq=state.cart.reduce((a,x)=>a+x.qty,0);$$('[data-preview-cart-count]').forEach(x=>x.textContent=cq);$$('[data-preview-wishlist-count]').forEach(x=>x.textContent=state.wishlist.length);$$('[data-wishlist-toggle]').forEach(btn=>btn.classList.toggle('is-active',state.wishlist.includes(btn.dataset.product)))}
+  function addCart(id){const p=products.find(x=>x.id===id)||products[0],line=state.cart.find(x=>x.id===p.id);if(line)line.qty++;else state.cart.push({...p,qty:1});save();renderCart();toast('تمت إضافة المنتج إلى السلة')}
+  document.addEventListener('click',e=>{const add=e.target.closest('[data-preview-add]');if(add){e.preventDefault();addCart(add.dataset.previewAdd);if(add.dataset.openCart==='true')open(cart)}const w=e.target.closest('[data-wishlist-toggle]');if(w){e.preventDefault();const id=w.dataset.product||'seeds',i=state.wishlist.indexOf(id);if(i>=0){state.wishlist.splice(i,1);toast('تمت الإزالة من المفضلة')}else{state.wishlist.unshift(id);toast('تمت الإضافة إلى المفضلة')}save();renderWishlist()}});
+  function renderCart(){const box=$('[data-preview-cart-items]');if(!box)return;const threshold=250,totalValue=state.cart.reduce((a,x)=>a+x.price*x.qty,0),remaining=Math.max(0,threshold-totalValue),pct=Math.min(100,Math.round(totalValue/threshold*100));const prog=$('.g-shipping-progress b'),msg=$('.g-shipping-progress div');if(prog)prog.style.setProperty('--progress',pct+'%');if(msg)msg.childNodes[0].nodeValue=remaining>0?`أضف ${remaining} AED للوصول إلى الشحن المجاني `:'وصلت إلى حد الشحن المجاني ';if(!state.cart.length){box.innerHTML='<div class="g-empty-state"><h4>السلة فارغة</h4><p>ابدأ بإضافة المنتجات التي تحتاجها.</p></div>';const total=$('[data-preview-cart-total]');if(total)total.textContent='0 AED';return}box.innerHTML=state.cart.map((x,i)=>`<div class="g-drawer-item" data-cart-index="${i}"><a class="g-drawer-thumb" href="product.html"><img src="${x.img}" alt="${x.title}"></a><div><a class="g-drawer-title" href="product.html">${x.title}</a><span>${x.price} AED</span><div class="g-drawer-item-controls"><button data-pv-dec>−</button><span>${x.qty}</span><button data-pv-inc>+</button><button class="g-drawer-remove" data-pv-remove>حذف</button></div></div><strong>${x.price*x.qty} AED</strong></div>`).join('');const total=state.cart.reduce((a,x)=>a+x.price*x.qty,0);$('[data-preview-cart-total]')?.replaceChildren(document.createTextNode(total+' AED'))}
+  $('[data-preview-cart-items]')?.addEventListener('click',e=>{const row=e.target.closest('[data-cart-index]');if(!row)return;const i=+row.dataset.cartIndex;if(e.target.closest('[data-pv-inc]'))state.cart[i].qty++;if(e.target.closest('[data-pv-dec]'))state.cart[i].qty=Math.max(1,state.cart[i].qty-1);if(e.target.closest('[data-pv-remove]'))state.cart.splice(i,1);save();renderCart()});
+  function renderWishlist(){const box=$('[data-preview-wishlist-items]');if(!box)return;if(!state.wishlist.length){box.innerHTML='<div class="g-empty-state"><h4>المفضلة فارغة</h4><p>اضغط على القلب لحفظ أي منتج.</p></div>';return}box.innerHTML=state.wishlist.map(id=>products.find(p=>p.id===id)).filter(Boolean).map(p=>`<div class="g-wishlist-item"><a href="product.html"><img src="${p.img}" alt="${p.title}"></a><a href="product.html"><strong>${p.title}</strong><small>${p.price} AED</small></a><button data-pv-wremove="${p.id}">×</button></div>`).join('')}
+  $('[data-preview-wishlist-items]')?.addEventListener('click',e=>{const b=e.target.closest('[data-pv-wremove]');if(!b)return;state.wishlist=state.wishlist.filter(x=>x!==b.dataset.pvWremove);save();renderWishlist()});
+  // predictive search demo
+  const input=$('[data-preview-search]'),results=$('[data-preview-search-results]');function renderSearch(term){if(!results)return;const t=(term||'').trim().toLowerCase(),rows=t.length<1?products.slice(0,4):products.filter(p=>(p.title+' '+p.type).toLowerCase().includes(t)).slice(0,6);results.innerHTML=rows.length?rows.map(p=>`<a class="g-predictive-item" href="product.html"><img src="${p.img}"><div><strong>${p.title}</strong><small>${p.type}</small></div><span>${p.price} AED</span></a>`).join(''):'<div class="g-predictive-empty">لا توجد منتجات مطابقة</div>'}input?.addEventListener('input',()=>renderSearch(input.value));renderSearch('');
+  // product gallery and quantity
+  $$('[data-thumb]').forEach(b=>b.addEventListener('click',()=>{const img=$('[data-main-product-image]');if(img&&b.dataset.src)img.src=b.dataset.src;$$('[data-thumb]').forEach(x=>x.classList.remove('is-active'));b.classList.add('is-active')}));$$('[data-qty-plus]').forEach(b=>b.addEventListener('click',()=>{const i=b.parentElement.querySelector('input');i.value=(+i.value||1)+1}));$$('[data-qty-minus]').forEach(b=>b.addEventListener('click',()=>{const i=b.parentElement.querySelector('input');i.value=Math.max(1,(+i.value||1)-1)}));
+  // collection demo filters
+  const productCards=$$('[data-demo-product]');function filterCollection(){if(!productCards.length)return;const cats=$$('input[data-filter-cat]:checked').map(x=>x.value);const max=+$('[data-filter-max]')?.value||9999;let visible=0;productCards.forEach(card=>{const okCat=!cats.length||cats.includes(card.dataset.category),okPrice=(+card.dataset.price||0)<=max,ok=okCat&&okPrice;card.style.display=ok?'':'none';if(ok)visible++});const c=$('[data-demo-count]');if(c)c.textContent=visible+' منتج'}$$('input[data-filter-cat],input[data-filter-max]').forEach(x=>x.addEventListener('input',filterCollection));$('[data-filter-reset]')?.addEventListener('click',()=>{$$('input[data-filter-cat]').forEach(x=>x.checked=false);const m=$('[data-filter-max]');if(m)m.value='250';filterCollection()});
 
-  function closeAll(){
-    search?.classList.remove('is-open');
-    cart?.classList.remove('is-open');
-    wishlist?.classList.remove('is-open');
-    mobile?.classList.remove('is-open');
-    mobile?.setAttribute('aria-hidden','true');
-    backdrop?.classList.remove('is-open');
-    document.documentElement.style.overflow='';
-  }
-  function open(el){
-    closeAll();
-    el?.classList.add('is-open');
-    backdrop?.classList.add('is-open');
-    document.documentElement.style.overflow='hidden';
-  }
-
-  qa('[data-search-open]').forEach(b=>b.addEventListener('click',()=>open(search)));
-  qa('[data-search-close]').forEach(b=>b.addEventListener('click',closeAll));
-  qa('[data-cart-open]').forEach(b=>b.addEventListener('click',()=>open(cart)));
-  qa('[data-cart-close]').forEach(b=>b.addEventListener('click',closeAll));
-  qa('[data-wishlist-open]').forEach(b=>b.addEventListener('click',()=>open(wishlist)));
-  qa('[data-wishlist-close]').forEach(b=>b.addEventListener('click',closeAll));
-  qa('[data-menu-open]').forEach(b=>b.addEventListener('click',()=>{
-    closeAll();
-    mobile?.classList.add('is-open');
-    mobile?.setAttribute('aria-hidden','false');
-    backdrop?.classList.add('is-open');
-    document.documentElement.style.overflow='hidden';
-  }));
-  qa('[data-menu-close]').forEach(b=>b.addEventListener('click',closeAll));
-  backdrop?.addEventListener('click',closeAll);
-  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeAll(); });
-
-  qa('[data-wishlist-toggle]').forEach(btn=>btn.addEventListener('click',e=>{
-    e.preventDefault();
-    btn.classList.toggle('is-active');
-    btn.textContent = btn.classList.contains('is-active') ? '♥' : '♡';
-  }));
-
-  // Simple preview quantity controls
-  qa('.g-drawer-item-controls').forEach(row=>{
-    const buttons=qa('button',row).filter(b=>!b.classList.contains('g-drawer-remove'));
-    const count=q('span',row);
-    if(buttons.length>=2 && count){
-      buttons[0].addEventListener('click',()=>count.textContent=Math.max(1,(+count.textContent||1)-1));
-      buttons[1].addEventListener('click',()=>count.textContent=(+count.textContent||1)+1);
-    }
-  });
-
-  // Keep preview links usable when href is omitted in demo anchors
-  qa('a:not([href])').forEach(a=>a.setAttribute('href','#'));
+  // Quick view V5
+  const quickModal=$('[data-quick-modal]'),quickContent=$('[data-quick-content]');document.addEventListener('keydown',e=>{if(e.key==='Escape'&&quickModal?.classList.contains('is-open')){quickModal.classList.remove('is-open');quickModal.setAttribute('aria-hidden','true');document.documentElement.style.overflow=''}});
+  function openQuick(id){const p=products.find(x=>x.id===id)||products[0];if(!quickModal||!quickContent)return;quickContent.innerHTML=`<div class="pv-quick-image"><img src="${p.img}" alt="${p.title}"></div><div class="pv-quick-copy"><small>${p.type}</small><h2>${p.title}</h2><div class="pv-quick-price">${p.price} AED ${p.old?`<s style="font-size:13px;color:#9ba39c">${p.old} AED</s>`:''}</div><p>معاينة سريعة للمنتج. التفاصيل النهائية والمخزون والخيارات ترتبط ببيانات Shopify الفعلية.</p><div class="pv-quick-actions"><button class="g-btn g-btn--primary" data-quick-add="${p.id}">أضف للسلة</button><a class="g-btn g-btn--outline" href="product.html">عرض التفاصيل</a></div></div>`;quickModal.classList.add('is-open');quickModal.setAttribute('aria-hidden','false');document.documentElement.style.overflow='hidden'}
+  document.addEventListener('click',e=>{const q=e.target.closest('[data-quick-view]');if(q){e.preventDefault();openQuick(q.dataset.quickView)}const qa=e.target.closest('[data-quick-add]');if(qa){addCart(qa.dataset.quickAdd);quickModal?.classList.remove('is-open');document.documentElement.style.overflow=''}if(e.target.closest('[data-quick-close]')||e.target===quickModal){quickModal?.classList.remove('is-open');quickModal?.setAttribute('aria-hidden','true');document.documentElement.style.overflow=''}});
+  // contact/newsletter demo
+  $$('[data-demo-form]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();toast('تم استلام النموذج في المعاينة')}));
+  // scroll reveals
+  const rev=$$('[data-reveal]');if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});rev.forEach(el=>io.observe(el))}else rev.forEach(el=>el.classList.add('is-visible'));
+  // nav active class
+  const path=location.pathname.split('/').pop()||'index.html';$$('.preview-brand-menu a').forEach(a=>{const href=(a.getAttribute('href')||'').split('#')[0];if(href===path)a.classList.add('is-active')});$$('.g-mobile-dock a').forEach(a=>{const href=(a.getAttribute('href')||'').split('#')[0];if(href===path)a.classList.add('is-active')});
+  syncCounts();renderCart();renderWishlist();filterCollection();
 })();

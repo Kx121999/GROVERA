@@ -1,0 +1,14 @@
+GOLDEN ROOTS V5 QA REPORT
+=========================
+Status: PASS
+Static HTML pages: 15
+Shopify sections: 26
+Shopify templates: 12
+JavaScript syntax: PASS (node --check)
+Brand replacement: PASS
+Static internal asset links: PASS
+Shopify JSON + section schema parse: PASS
+Quick View: static + Shopify implemented
+Shop by Need: static + Shopify implemented
+Official logo handling: previous logo removed; Shopify logo setting retained
+Mobile-first dock, sticky ATC, predictive search, AJAX cart, filters, wishlist retained
