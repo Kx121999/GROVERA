@@ -1,6 +1,6 @@
-# GOLDEN ROOTS V5.2 — Setup Guide
+# GOLDEN ROOTS V6 — Setup Guide
 
-1. Upload `GOLDEN_ROOTS_Shopify_Theme_V5.2.zip` in Shopify → Online Store → Themes → Add theme → Upload zip.
+1. Upload `GOLDEN_ROOTS_Shopify_Theme_V6.zip` in Shopify → Online Store → Themes → Add theme → Upload zip.
 2. Keep it unpublished while reviewing.
 3. Open Theme settings → Brand and upload the approved GOLDEN ROOTS logo.
 4. Add products, collections, prices, inventory and real images.
@@ -12,5 +12,5 @@
 The static GitHub Pages preview is not the live Shopify checkout.
 
 
-## Official logo integration (V5.2)
+## Official logo integration (V6)
 The approved GOLDEN ROOTS green/gold logo is bundled in the theme and used automatically in the header, mobile navigation, footer, favicon/brand mark, hero brand seal and Organization structured data.

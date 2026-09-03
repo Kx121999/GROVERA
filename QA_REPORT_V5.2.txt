@@ -1,0 +1,23 @@
+GOLDEN ROOTS V5.2 — Logo Integration QA
+
+Static HTML pages: 15
+Official horizontal logo: assets/golden-roots-logo.png
+Official full logo: assets/golden-roots-logo-full.png
+Official brand mark: assets/golden-roots-mark.png
+
+Integrated locations:
+- Desktop header on all static pages
+- Mobile navigation on all static pages
+- Footer on all static pages
+- Homepage hero brand seal
+- Browser/PWA favicon mark
+- Shopify desktop header fallback
+- Shopify mobile navigation fallback
+- Shopify footer fallback
+- Shopify homepage hero brand seal
+- Shopify Organization structured-data logo
+
+Validation:
+- No obsolete Arabic spelling "جولند روتس" in static HTML
+- Shopify JSON files parse successfully
+- Official logo assets bundled in GitHub and Shopify packages

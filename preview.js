@@ -4,7 +4,7 @@
   const backdrop=$('.g-backdrop'), search=$('.g-search-overlay'), cart=$('.g-cart-drawer'), wishlist=$('.g-wishlist-drawer'), mobile=$('.g-mobile-menu');
   const layers=[search,cart,wishlist,mobile].filter(Boolean);
   const progress=document.createElement('div');progress.className='pv-scroll-progress';document.body.appendChild(progress);window.addEventListener('scroll',()=>{const d=document.documentElement;const pct=d.scrollHeight>d.clientHeight?(d.scrollTop/(d.scrollHeight-d.clientHeight))*100:0;progress.style.setProperty('--scroll',pct+'%')},{passive:true});
-  const state={cart:JSON.parse(localStorage.getItem('golden_roots_preview_cart_v5')||'[]'),wishlist:JSON.parse(localStorage.getItem('golden_roots_preview_wishlist_v5')||'[]')};
+  const state={cart:JSON.parse(localStorage.getItem('golden_roots_preview_cart_v6')||'[]'),wishlist:JSON.parse(localStorage.getItem('golden_roots_preview_wishlist_v6')||'[]')};
   const products=[
     {id:'seeds',title:'بذور هجينة مختارة',type:'بذور',price:85,old:105,img:'assets/product-seeds.png'},
     {id:'fertilizer',title:'سماد متوازن للنبات',type:'أسمدة',price:65,img:'assets/product-fertilizer.png'},
@@ -15,7 +15,7 @@
     {id:'pest',title:'منتج مكافحة آفات',type:'مكافحة الآفات',price:99,img:'assets/product-protection.png'},
     {id:'controller',title:'وحدة تحكم ري',type:'أنظمة الري',price:189,img:'assets/product-irrigation.png'}
   ];
-  const save=()=>{localStorage.setItem('golden_roots_preview_cart_v5',JSON.stringify(state.cart));localStorage.setItem('golden_roots_preview_wishlist_v5',JSON.stringify(state.wishlist));syncCounts()};
+  const save=()=>{localStorage.setItem('golden_roots_preview_cart_v6',JSON.stringify(state.cart));localStorage.setItem('golden_roots_preview_wishlist_v6',JSON.stringify(state.wishlist));syncCounts()};
   function closeAll(){layers.forEach(el=>{el?.classList.remove('is-open');el?.setAttribute('aria-hidden','true')});backdrop?.classList.remove('is-open');document.documentElement.style.overflow=''}
   function open(el){closeAll();el?.classList.add('is-open');el?.setAttribute('aria-hidden','false');backdrop?.classList.add('is-open');document.documentElement.style.overflow='hidden';if(el===cart)renderCart();if(el===wishlist)renderWishlist()}
   $$('[data-search-open]').forEach(b=>b.addEventListener('click',()=>{open(search);setTimeout(()=>$('[data-preview-search]')?.focus(),80)}));$$('[data-search-close]').forEach(b=>b.addEventListener('click',closeAll));
@@ -47,5 +47,9 @@
   const rev=$$('[data-reveal]');if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});rev.forEach(el=>io.observe(el))}else rev.forEach(el=>el.classList.add('is-visible'));
   // nav active class
   const path=location.pathname.split('/').pop()||'index.html';$$('.preview-brand-menu a').forEach(a=>{const href=(a.getAttribute('href')||'').split('#')[0];if(href===path)a.classList.add('is-active')});$$('.g-mobile-dock a').forEach(a=>{const href=(a.getAttribute('href')||'').split('#')[0];if(href===path)a.classList.add('is-active')});
+  // V6 premium header state
+  const siteHeader=$('[data-site-header]');
+  const setHeaderState=()=>siteHeader?.classList.toggle('is-scrolled',window.scrollY>24);
+  setHeaderState();window.addEventListener('scroll',setHeaderState,{passive:true});
   syncCounts();renderCart();renderWishlist();filterCollection();
 })();

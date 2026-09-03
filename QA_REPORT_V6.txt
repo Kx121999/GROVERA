@@ -1,0 +1,7 @@
+GOLDEN ROOTS V6 QA REPORT
+==========================================
+Static HTML pages: 15
+Shopify sections: 27
+Shopify templates: 12
+Issues: 0
+All checked local asset links, JSON files, and Liquid schemas passed.

@@ -1,1 +1,15 @@
-{"name":"GOLDEN ROOTS — جولدن روتس للزراعة ومستلزماتها","short_name":"GOLDEN ROOTS","start_url":"./index.html","display":"standalone","background_color":"#ffffff","theme_color":"#073f18","icons":[{"src":"assets/golden-roots-mark.png","sizes":"800x800","type":"image/png"}]}
+{
+  "name": "GOLDEN ROOTS — جولدن روتس للزراعة ومستلزماتها",
+  "short_name": "GOLDEN ROOTS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#073f18",
+  "icons": [
+    {
+      "src": "assets/golden-roots-mark.png",
+      "sizes": "800x800",
+      "type": "image/png"
+    }
+  ]
+}
