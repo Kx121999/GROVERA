@@ -1,9 +1,5 @@
-# GOLDEN ROOTS V16 — Standalone Website
+# GOLDEN ROOTS — Standalone Website V17
 
-**جولدن روتس للزراعة ومستلزماتها**
+This is the pre-Shopify standalone storefront. Upload the ZIP contents directly to GitHub Pages.
 
-V16 is the complete standalone website preview intended for design/UX approval before Shopify is activated. It runs on GitHub Pages with no backend.
-
-Start with `index.html`. The catalog, product pages, category routes, cart, wishlist, compare, quick order, farm lists, account UI and checkout UI all work in-browser.
-
-Live commerce integrations are deliberately deferred until the store account is activated.
+Start at `index.html`. The central catalog is `catalog.json`. Live payment, shipping, authentication and real order submission are intentionally deferred.

@@ -1,17 +1,27 @@
 {
-  "name": "GOLDEN ROOTS — جولدن روتس للزراعة ومستلزماتها",
+  "name": "GOLDEN ROOTS — جولدن روتس",
   "short_name": "GOLDEN ROOTS",
+  "description": "Agriculture & supplies storefront",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#f6f8f4",
   "theme_color": "#073f18",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
   "icons": [
     {
-      "src": "assets/golden-roots-mark.png",
-      "sizes": "800x800",
-      "type": "image/png"
+      "src": "assets/golden-roots-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/golden-roots-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ],
-  "lang": "ar",
-  "dir": "rtl"
+  ]
 }

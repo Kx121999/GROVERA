@@ -1,0 +1,33 @@
+GOLDEN ROOTS V17 — QA REPORT
+Date: 2026-09-03
+
+STATIC / STRUCTURAL QA
+PASS — 25 standalone HTML pages present.
+PASS — 26 products in the canonical catalog.json.
+PASS — 6 primary agricultural categories.
+PASS — Product IDs are unique.
+PASS — All product and category image references exist.
+PASS — All local HTML src/href references resolve.
+PASS — app-v17.js syntax validated with Node.js.
+PASS — catalog-loader.js syntax validated with Node.js.
+PASS — sw.js syntax validated with Node.js.
+PASS — catalog.json and site.webmanifest parse as valid JSON.
+PASS — Local HTTP server returns index.html and catalog.json successfully.
+PASS — PWA icon files are true 192x192 and 512x512 PNGs.
+PASS — Standalone customer-facing V17 files do not depend on Shopify APIs.
+
+FUNCTIONAL LOGIC INCLUDED
+- One central catalog data model for home, collections, search, products, cart, wishlist, compare and Quick Order.
+- Bilingual Arabic/English search with SKU matching and synonyms.
+- URL-driven category, availability, brand, price and sorting filters.
+- Variant-aware cart with quantity editing, saved cart and local discount simulation.
+- 3-step checkout simulation and locally saved order confirmation/history.
+- Recently viewed and same-category recommendations.
+- Wishlist, comparison, Farm Lists and Quick Order.
+- PWA manifest, service worker and offline fallback.
+
+RUNTIME BROWSER QA LIMITATION
+An automated Chromium/Playwright navigation test was attempted, but this environment blocks browser navigation with ERR_BLOCKED_BY_ADMINISTRATOR, including localhost and intercepted test hosts. Therefore this report does NOT claim successful browser-rendered end-to-end QA. The package passed static, syntax, asset, JSON and HTTP-serving checks above.
+
+INTENTIONALLY NOT LIVE
+No real payment processing, shipping rates, authentication, email sending, server-side order persistence, Google tracking or Meta tracking are enabled.
