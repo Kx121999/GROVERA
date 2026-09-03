@@ -1,0 +1,19 @@
+GOLDEN ROOTS V10 QA REPORT
+============================
+Static HTML pages: 18
+Shopify sections: 32
+Shopify templates: 15
+Liquid schemas parsed: 32
+Smart Finder: PRESENT
+Search V3: PRESENT
+Visual Mega Menu: PRESENT
+Quick Buy for multi-variant products: PRESENT
+Collection grid preference: PRESENT
+Inline B2B Product Quote: PRESENT
+Save for Later: PRESENT
+Customer one-tap reorder (legacy accounts): PRESENT
+Mobile Dock V2: PRESENT
+Recent searches: PRESENT
+Recently viewed on homepage: PRESENT
+Errors found: 0
+Status: PASS

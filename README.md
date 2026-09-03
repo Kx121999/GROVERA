@@ -24,3 +24,7 @@ Theme code cannot activate payment gateways, COD, shipping profiles, taxes, Cust
 
 ## V9 launch hardening
 See `CHANGELOG_V9.md`, `PERFORMANCE_V9.md`, and `SECURITY_NOTES_V9.md`.
+
+
+## V10
+Signature Commerce UX adds Smart Finder, Search V3, visual mega menu, Quick Buy, sticky collection controls, inline B2B quoting, Save for Later and customer reorder (legacy accounts).
