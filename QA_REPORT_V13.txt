@@ -1,0 +1,32 @@
+GOLDEN ROOTS V13 QA REPORT
+===========================
+Status: PASS
+HTML pages: 22
+Shopify sections: 40
+Shopify templates: 25
+Liquid schemas parsed: 40
+Errors: 0
+Warnings: 0
+
+V13 checks
+- Farm Quick Order Center wired
+- Multi-list Saved Farm Lists wired
+- Product + card Save to Farm List actions
+- Customer tier / loyalty display UI
+- Buy Again single item + full-order reorder retained
+- Native selling-plan subscription selector
+- Request Quote Cart contact form
+- V12 live catalog and all earlier commerce features retained
+- Banned legacy product content absent
+
+Platform boundaries documented
+- Device-local lists unless backend/app sync is connected
+- Loyalty display does not award points
+- B2B company/multi-user catalogs require Shopify B2B/app
+- Selling plans require a compatible subscription setup
+
+ERRORS
+None
+
+WARNINGS
+None

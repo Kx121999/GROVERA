@@ -1,4 +1,4 @@
-# GOLDEN ROOTS — Live Commerce Engine V12
+# GOLDEN ROOTS — Farm Commerce & Retention V13
 
 **جولدن روتس للزراعة ومستلزماتها**
 
@@ -17,3 +17,7 @@ Catalog Intelligence adds compare, profile-specific product templates, complemen
 
 ## V12
 Live catalog architecture, automatic product profiles, richer Shopify media, smart cart matching, B2B MOQ, UAE ETA guidance, and catalog fallbacks are implemented. See `CHANGELOG_V12.md`, `V12_CATALOG_DATA_SETUP.md`, and `V12_ADMIN_WORKFLOW.md`.
+
+
+## V13
+Farm Quick Order, saved farm lists, Buy Again, tier/loyalty account UI, native selling-plan subscriptions, and Request Quote Cart are implemented. See `CHANGELOG_V13.md` and `V13_RETENTION_SETUP.md`.
