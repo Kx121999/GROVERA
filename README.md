@@ -1,10 +1,10 @@
-# GOLDEN ROOTS — Shopify Theme V8
+# GOLDEN ROOTS — Shopify Theme V9
 
 **جولدن روتس للزراعة ومستلزماتها**
 
-V8 focuses on store operations and customer experience without adding Google/Meta tracking.
+V9 focuses on store operations and customer experience without adding Google/Meta tracking.
 
-## V8 highlights
+## V9 highlights
 - Product states: New / Best seller / Sale / Preorder / Coming soon / Sold out
 - Native Shopify variant, inventory, cart and checkout flow from the previous release
 - Dynamic enabled payment icons
@@ -19,4 +19,8 @@ V8 focuses on store operations and customer experience without adding Google/Met
 - Arabic RTL / English LTR
 
 ## Important
-Theme code cannot activate payment gateways, COD, shipping profiles, taxes, Customer Accounts or a reviews app by itself. Those settings remain in Shopify Admin. V8 provides the storefront UI and integration points for them.
+Theme code cannot activate payment gateways, COD, shipping profiles, taxes, Customer Accounts or a reviews app by itself. Those settings remain in Shopify Admin. V9 provides the storefront UI and integration points for them.
+
+
+## V9 launch hardening
+See `CHANGELOG_V9.md`, `PERFORMANCE_V9.md`, and `SECURITY_NOTES_V9.md`.

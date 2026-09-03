@@ -1,0 +1,11 @@
+GOLDEN ROOTS V9 QA REPORT
+HTML pages: 18
+Shopify sections: 30
+Shopify templates: 14
+Converted WebP assets (root): 13
+Converted root asset bytes: 1066239 -> 568236 (46.7% smaller)
+Errors: 0
+Warnings: 0
+Node syntax checks: PASS (golden-roots.js, preview.js)
+Static HTTP page checks: PASS (18/18 returned HTTP 200 on isolated local server)
+Shopify theme JSON/schema checks: PASS

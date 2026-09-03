@@ -50,7 +50,7 @@
   // V7 premium header state
   const siteHeader=$('[data-site-header]');
   const setHeaderState=()=>siteHeader?.classList.toggle('is-scrolled',window.scrollY>24);
-  setHeaderState();window.addEventListener('scroll',setHeaderState,{passive:true});
+  setHeaderState();let pvScrollTick=false;window.addEventListener('scroll',()=>{if(pvScrollTick)return;pvScrollTick=true;requestAnimationFrame(()=>{setHeaderState();pvScrollTick=false})},{passive:true});
   syncCounts();renderCart();renderWishlist();filterCollection();
 
   // V8 preview: delivery selector
@@ -58,5 +58,11 @@
   // V8 preview: full wishlist page
   function renderPreviewWishlistPage(){const box=$('[data-preview-wishlist-page]');if(!box)return;if(!state.wishlist.length){box.innerHTML='<div class="g-empty-state g-empty-large"><h2>المفضلة فارغة</h2><p>احفظ منتجاً من المتجر ثم عد إلى هذه الصفحة.</p><a class="g-btn g-btn--primary" href="collection.html">تصفح المنتجات</a></div>';return}box.innerHTML=`<div class="g-v8-wishlist-grid">${state.wishlist.map(id=>products.find(p=>p.id===id)).filter(Boolean).map(p=>`<article class="g-v8-wishlist-card"><a href="product.html"><img src="${p.img}" alt="${p.title}"></a><div><a href="product.html"><strong>${p.title}</strong></a><div><button class="g-btn g-btn--primary" data-preview-add="${p.id}">أضف للسلة</button><button class="g-btn g-btn--outline" data-preview-wishlist-page-remove="${p.id}">إزالة</button></div></div></article>`).join('')}</div>`}
   document.addEventListener('click',e=>{const b=e.target.closest('[data-preview-wishlist-page-remove]');if(!b)return;state.wishlist=state.wishlist.filter(x=>x!==b.dataset.previewWishlistPageRemove);save();renderPreviewWishlistPage();renderWishlist()});renderPreviewWishlistPage();
+
+
+  // V9 preview accessibility hardening
+  const pvFocusSel='a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
+  let pvLastFocus=null;document.addEventListener('click',e=>{const t=e.target.closest('[data-search-open],[data-cart-open],[data-menu-open],[data-wishlist-open],[data-quick-view]');if(t)pvLastFocus=t;},true);
+  document.addEventListener('keydown',e=>{const dlg=$$('.g-search-overlay,.g-cart-drawer,.g-wishlist-drawer,.g-mobile-menu,.pv-quick-modal').find(x=>x.classList.contains('is-open'));if(!dlg)return;if(e.key==='Tab'){const items=$$(pvFocusSel,dlg).filter(x=>x.offsetParent!==null);if(!items.length)return;const a=items[0],b=items[items.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();b.focus()}else if(!e.shiftKey&&document.activeElement===b){e.preventDefault();a.focus()}}if(e.key==='Escape')setTimeout(()=>pvLastFocus?.focus?.(),0)});
 
 })();
