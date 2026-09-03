@@ -1,28 +1,22 @@
-# GOLDEN ROOTS — Shopify Theme V7
+# GOLDEN ROOTS — Shopify Theme V8
 
 **جولدن روتس للزراعة ومستلزماتها**
 
-V7 converts the previous premium storefront into a Shopify-native commerce build focused on real catalog data and conversion.
+V8 focuses on store operations and customer experience without adding Google/Meta tracking.
 
-## V7 highlights
-- Shopify product / variant / inventory-aware product page
-- Low-stock messaging for tracked variants
-- Variant price, SKU, availability and image updates without reload
-- AJAX add-to-cart and quantity updates
-- AJAX cart drawer and cart page controls
-- Discount-code field before checkout
-- Order note autosave
-- Free-shipping progress bar
-- Optional cart upsell collection
-- Predictive search for products + collections
-- Shopify collection filters with active-filter chips
-- Dynamic checkout button support
-- Customer-account link when enabled
-- WhatsApp pre-purchase support
-- Product recommendations + recently viewed
+## V8 highlights
+- Product states: New / Best seller / Sale / Preorder / Coming soon / Sold out
+- Native Shopify variant, inventory, cart and checkout flow from the previous release
+- Dynamic enabled payment icons
+- Optional Cash on Delivery note (display only; COD must be enabled in Shopify Admin)
+- UAE emirate selector before checkout (informational; Shopify checkout remains source of truth for rates)
+- Enriched product WhatsApp message with selected variant, price and URL
+- B2B / farm bulk-quote page template using Shopify contact form
+- Reviews section with Shopify App Blocks + standard rating metafield support
+- Full wishlist page + add-to-cart from wishlist
+- Customer Account links when Shopify Customer Accounts are enabled
+- Cart discount, notes, upsells and free-shipping progress
 - Arabic RTL / English LTR
 
 ## Important
-This theme is technically ready for real Shopify data. Actual products, prices, stock, shipping rates, payment gateways, tax configuration and the live WhatsApp number must be entered in the merchant's Shopify Admin.
-
-See `SETUP_GUIDE.md`, `GOLDEN_ROOTS_PRODUCT_IMPORT_TEMPLATE.csv`, and `GOLDEN_ROOTS_LAUNCH_CHECKLIST.md`.
+Theme code cannot activate payment gateways, COD, shipping profiles, taxes, Customer Accounts or a reviews app by itself. Those settings remain in Shopify Admin. V8 provides the storefront UI and integration points for them.

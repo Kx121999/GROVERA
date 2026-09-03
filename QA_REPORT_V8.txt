@@ -1,0 +1,32 @@
+GOLDEN ROOTS V8 — QA REPORT
+
+Brand: GOLDEN ROOTS — جولدن روتس للزراعة ومستلزماتها
+Scope: Store Operations & Customer Experience
+
+Static preview
+- HTML pages: 18
+- Missing local href/src references: 0
+- New operational preview pages: account.html, wishlist.html, wholesale.html
+
+Shopify theme
+- Sections: 30
+- JSON templates: 14
+- JSON parse errors: 0
+- Liquid section schema JSON errors: 0
+- JavaScript syntax: PASS (golden-roots.js and preview.js checked with Node)
+
+V8 feature checks
+- Preorder / coming soon / sold-out states: implemented
+- Enabled payment icons: implemented dynamically from Shopify
+- COD note: optional theme setting; actual COD must be enabled in Shopify Admin
+- UAE emirate selector: implemented as pre-check UI; actual rates remain Shopify Checkout source of truth
+- Product WhatsApp message with selected variant/price/URL: implemented
+- B2B bulk quote page template: implemented
+- Reviews App Block section: implemented
+- Full wishlist page + add-to-cart: implemented
+- Shopify Customer Account entry points: implemented when accounts are enabled
+
+Important live-store limitation
+Payment providers, COD, UAE shipping profiles/rates, tax settings, Customer Accounts and review apps cannot be activated by theme files alone. They must be configured in the merchant's Shopify Admin.
+
+Result: PASS for local/static and structural theme QA. Live checkout/payment/shipping QA requires the connected Shopify store.

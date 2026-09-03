@@ -56,3 +56,5 @@ body{padding-bottom:0}.g-search-overlay,.g-backdrop{display:none}.g-search-overl
 
 /* V7 preview refinements */
 .preview-note{background:#062f17;color:#efd070;letter-spacing:.2px}.v7-header + main{position:relative}
+
+.g-v8-account-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.g-v8-account-preview .g-v8-review-empty{align-items:flex-start}@media(max-width:760px){.g-v8-account-preview{grid-template-columns:1fr}}
