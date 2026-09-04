@@ -1,5 +1,5 @@
-const CACHE='golden-roots-v19-1';
-const SHELL=['./','./index.html','./collection.html','./collections.html','./product.html','./search.html','./cart.html','./checkout.html','./offline.html','./catalog.json','./catalog-data.js','./catalog-loader.js','./app-v19.js','./v16-standalone.css','./v17-smart-store.css','./v18-cinematic.css','./v19-hardening.css','./assets/golden-roots-logo.webp','./assets/golden-roots-mark.webp','./assets/golden-roots-hero.webp'];
+const CACHE='golden-roots-v20-1';
+const SHELL=['./','./index.html','./collection.html','./collections.html','./product.html','./offers.html','./brands.html','./brand.html','./campaign.html','./trust.html','./search.html','./cart.html','./checkout.html','./offline.html','./catalog.json','./catalog-data.js','./catalog-loader.js','./site-config.js','./commerce-content.js','./app-v20.js','./v16-standalone.css','./v17-smart-store.css','./v18-cinematic.css','./v19-hardening.css','./v20-commerce.css','./assets/golden-roots-logo.webp','./assets/golden-roots-mark.webp','./assets/golden-roots-hero.webp'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('message',e=>{if(e.data&&e.data.type==='SKIP_WAITING')self.skipWaiting()});

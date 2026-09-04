@@ -1,0 +1,17 @@
+GOLDEN ROOTS V20 QA REPORT
+===========================
+Status: PASS
+HTML pages: 28
+Catalog products: 26
+Categories: 6
+JS checks: 4 files
+HTTP route smoke checks: 16/16 returned 200
+Errors: 0
+Warnings: 0
+
+Notes:
+- Preview remains noindex until the real domain is known.
+- No real payment or backend form delivery is connected.
+- No Shopify, Meta or Google tracking dependency was added.
+- HTTP smoke test covered key pages, catalog, manifest, CSS, JS and service worker.
+- Browser-rendered visual QA was not claimed; this report covers code, structure, references, data and HTTP checks.

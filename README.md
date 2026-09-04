@@ -1,7 +1,12 @@
-# GOLDEN ROOTS V18 — Cinematic Premium Storefront
+# GOLDEN ROOTS V20
 
-# GOLDEN ROOTS — Standalone Website V17
+Standalone premium agricultural storefront.
 
-This is the pre-Shopify standalone storefront. Upload the ZIP contents directly to GitHub Pages.
+Primary files:
+- `catalog.json` — central demo catalog
+- `commerce-content.js` — commercial campaigns/category copy/trust content
+- `site-config.js` — site-level settings and SEO switch
+- `app-v20.js` — storefront engine
+- `v20-commerce.css` — V20 commercial design layer
 
-Start at `index.html`. The central catalog is `catalog.json`. Live payment, shipping, authentication and real order submission are intentionally deferred.
+V20 does not depend on Shopify. Payment and server-side form delivery are not connected.

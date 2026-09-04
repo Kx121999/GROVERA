@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-# Preview pages include meta robots noindex,nofollow. Production robots.txt is managed by Shopify.
+# Preview HTML is noindex by default. Enable production SEO only after the real domain is known.
