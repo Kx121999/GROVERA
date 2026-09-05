@@ -1,7 +1,7 @@
 {
   "name": "GOLDEN ROOTS — Agriculture & Supplies",
   "short_name": "GOLDEN ROOTS",
-  "description": "Golden Roots V22 hardened production storefront.",
+  "description": "Golden Roots — premium agricultural supplies storefront.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -61,5 +61,5 @@
       ]
     }
   ],
-  "id": "./index.html?build=4089c1ba82"
+  "id": "./index.html?build=d4606f1337"
 }

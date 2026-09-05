@@ -1,5 +1,5 @@
-const CACHE='golden-roots-v22-4089c1ba82';
-const CORE=['./','./index.html','./collection.html','./product.html','./offline.html','./maintenance.html','./catalog.json','./assets/gr-v22.540493992aff.css','./assets/gr-v22.3ffb03a7b2cf.js','./config/site-config.json','./config/homepage.json','./config/campaigns.json','./config/brands.json','./config/navigation.json','./config/translations.json','./config/pages.json','./assets/golden-roots-logo.webp','./assets/golden-roots-mark.webp','./assets/golden-roots-hero.webp'];
+const CACHE='golden-roots-v23-d4606f1337';
+const CORE=['./','./index.html','./collection.html','./product.html','./offline.html','./maintenance.html','./catalog.json','./assets/gr-v23.a153fa85b1ce.css','./assets/gr-v23.bb1f17aa92e3.js','./config/site-config.json','./config/homepage.json','./config/campaigns.json','./config/brands.json','./config/navigation.json','./config/translations.json','./config/pages.json','./assets/golden-roots-logo.webp','./assets/golden-roots-mark.webp','./assets/golden-roots-hero.webp'];
 self.addEventListener('install',e=>e.waitUntil((async()=>{const c=await caches.open(CACHE);await Promise.allSettled(CORE.map(x=>c.add(x)));await self.skipWaiting()})()));
 self.addEventListener('activate',e=>e.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k.startsWith('golden-roots-')&&k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim()})()));
 self.addEventListener('message',e=>{if(e.data?.type==='SKIP_WAITING')self.skipWaiting()});
