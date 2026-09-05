@@ -1,3 +1,15 @@
+# GOLDEN ROOTS — V21
+
+Standalone agricultural storefront with centralized content control.
+
+- Storefront entry: `index.html`
+- Local content control: `control-center.html`
+- Central content: `/config/*.json`
+- Catalog: `catalog.json`
+- Runtime: `app-v21.js` + `content-loader-v21.js`
+
+See `V21_CONTROL_CENTER_GUIDE.md` and `CHANGELOG_V21.md`.
+
 # GOLDEN ROOTS V20
 
 Standalone premium agricultural storefront.

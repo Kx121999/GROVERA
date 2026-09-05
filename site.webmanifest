@@ -1,7 +1,7 @@
 {
   "name": "GOLDEN ROOTS — Agriculture & Supplies",
   "short_name": "GOLDEN ROOTS",
-  "description": "Golden Roots premium agricultural commerce storefront for the UAE.",
+  "description": "Golden Roots premium agricultural storefront with a centralized V21 content architecture.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
