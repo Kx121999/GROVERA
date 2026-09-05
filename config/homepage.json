@@ -2,19 +2,19 @@
   "hero": {
     "kicker": "GOLDEN ROOTS · AGRICULTURE & SUPPLIES",
     "titleAr": "كل ما تحتاجه للزراعة، في تجربة أوضح.",
-    "titleEn": "Agricultural essentials, in one clearer experience.",
-    "copyAr": "بذور، تغذية، حماية، ري وأدوات — اختيارات مرتبة للأفراد والمزارع والشركات، مع وصول أسرع للمنتج المناسب.",
-    "copyEn": "Seeds, nutrition, crop protection, irrigation and tools — clearly organized for individuals, farms and businesses, with a faster path to the right product.",
-    "image": "assets/golden-roots-hero.webp",
+    "titleEn": "Everything agriculture needs, in a clearer experience.",
+    "copyAr": "بذور، أسمدة، مغذيات، حماية المحاصيل، أنظمة الري والمزيد من أفضل العلامات التجارية.",
+    "copyEn": "Seeds, fertilizers, nutrition, crop protection, irrigation and more from trusted agricultural brands.",
+    "image": "assets/hero-reference-v25.webp",
     "primary": {
-      "labelAr": "تصفح المتجر",
-      "labelEn": "Shop the catalog",
+      "labelAr": "تسوق الآن",
+      "labelEn": "Shop now",
       "href": "collection.html"
     },
     "secondary": {
-      "labelAr": "اكتشف العروض",
-      "labelEn": "Explore offers",
-      "href": "offers.html"
+      "labelAr": "استكشف الأقسام",
+      "labelEn": "Explore categories",
+      "href": "collections.html"
     }
   },
   "sections": [
@@ -29,31 +29,21 @@
       "columns": 1
     },
     {
-      "id": "paths",
-      "enabled": true,
-      "labelAr": "مسارات الشراء",
-      "labelEn": "Commercial paths",
-      "instanceId": "paths-2",
-      "layout": "cards",
-      "background": "default",
-      "columns": 3
-    },
-    {
       "id": "categories",
       "enabled": true,
-      "labelAr": "الأقسام",
-      "labelEn": "Categories",
-      "instanceId": "categories-3",
-      "layout": "mosaic",
+      "labelAr": "الأقسام الرئيسية",
+      "labelEn": "Main categories",
+      "instanceId": "categories-2",
+      "layout": "cards",
       "background": "default",
-      "columns": 3
+      "columns": 5
     },
     {
       "id": "featured",
       "enabled": true,
-      "labelAr": "منتجات مختارة",
-      "labelEn": "Featured products",
-      "instanceId": "featured-4",
+      "labelAr": "العروض المختارة",
+      "labelEn": "Selected offers",
+      "instanceId": "featured-3",
       "layout": "grid",
       "background": "default",
       "columns": 4
@@ -63,34 +53,44 @@
       "enabled": true,
       "labelAr": "المزارع والشركات",
       "labelEn": "Farm & B2B",
-      "instanceId": "b2b-5",
+      "instanceId": "b2b-4",
       "layout": "split",
       "background": "default",
       "columns": 2
     },
     {
-      "id": "offers",
+      "id": "trust",
       "enabled": true,
-      "labelAr": "العروض",
-      "labelEn": "Offers",
-      "instanceId": "offers-6",
+      "labelAr": "شريط الثقة",
+      "labelEn": "Trust strip",
+      "instanceId": "trust-5",
       "layout": "grid",
       "background": "default",
       "columns": 4
     },
     {
-      "id": "trust",
-      "enabled": true,
-      "labelAr": "الثقة",
-      "labelEn": "Trust",
-      "instanceId": "trust-7",
+      "id": "paths",
+      "enabled": false,
+      "labelAr": "مسارات الشراء",
+      "labelEn": "Commercial paths",
+      "instanceId": "paths-6",
+      "layout": "cards",
+      "background": "default",
+      "columns": 3
+    },
+    {
+      "id": "offers",
+      "enabled": false,
+      "labelAr": "العروض الإضافية",
+      "labelEn": "Additional offers",
+      "instanceId": "offers-7",
       "layout": "grid",
       "background": "default",
       "columns": 4
     },
     {
       "id": "brandAuthority",
-      "enabled": true,
+      "enabled": false,
       "labelAr": "قوة العلامة",
       "labelEn": "Brand authority",
       "instanceId": "brandAuthority-8",
@@ -100,7 +100,7 @@
     },
     {
       "id": "recent",
-      "enabled": true,
+      "enabled": false,
       "labelAr": "شوهد مؤخرًا",
       "labelEn": "Recently viewed",
       "instanceId": "recent-9",
@@ -109,7 +109,7 @@
       "columns": 4
     }
   ],
-  "featuredLimit": 8,
+  "featuredLimit": 4,
   "offersLimit": 4,
   "campaignLimit": 3,
   "recentLimit": 4,
@@ -123,22 +123,22 @@
     },
     "categories": {
       "kicker": "SHOP BY CATEGORY",
-      "titleAr": "أقسام واضحة لبحث أسرع",
-      "titleEn": "Clear categories for faster discovery"
+      "titleAr": "الأقسام الرئيسية",
+      "titleEn": "Main categories"
     },
     "featured": {
-      "kicker": "FEATURED SELECTION",
-      "titleAr": "اختيارات مميزة من المتجر",
-      "titleEn": "Featured picks from the store",
-      "copyAr": "منتجات من أقسام مختلفة مع السعر والتوفر والمعلومة الأساسية في مكان واضح.",
-      "copyEn": "Products across key categories with price, availability and essential information surfaced clearly."
+      "kicker": "SELECTED OFFERS",
+      "titleAr": "العروض المختارة على منتجات أساسية",
+      "titleEn": "Selected offers on agricultural essentials",
+      "copyAr": "منتجات عالية الجودة بأسعار مميزة لفترة محدودة",
+      "copyEn": "High-quality products with selected value for a limited time"
     },
     "b2b": {
       "kicker": "FARM & B2B",
       "titleAr": "طلبات المزارع والشركات، بخطوات أقل.",
       "titleEn": "Farm and business orders, with fewer steps.",
-      "copyAr": "للكميات والطلبات المتكررة، استخدم الطلب السريع أو جهّز طلب عرض سعر بدل المرور برحلة التسوق العادية.",
-      "copyEn": "For volume and repeat orders, use Quick Order or prepare a quote request instead of following the standard retail flow."
+      "copyAr": "للكميات والطلبات المتكررة استخدم الطلب السريع أو تواصل معنا للحصول على عرض سعر مخصص.",
+      "copyEn": "For volume and repeat orders, use Quick Order or contact us for a tailored quotation."
     },
     "offers": {
       "kicker": "SELECTED OFFERS",
