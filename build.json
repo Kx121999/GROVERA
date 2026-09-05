@@ -1,7 +1,7 @@
 {
-  "version": "24.0.0",
-  "release": "Release 24.0",
-  "build": "3b8a834c85",
-  "css": "gr-v24.8f60c3b875e4.css",
-  "js": "gr-v24.2e57ee0f252a.js"
+  "version": "25.0.0",
+  "release": "Release 25.0 — Exact Reference UI",
+  "build": "26325c2173",
+  "css": "gr-v25.8db8b56a1513.css",
+  "js": "gr-v25.21f8245dbadc.js"
 }
