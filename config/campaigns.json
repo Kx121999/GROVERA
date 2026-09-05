@@ -4,10 +4,10 @@
     "selected-offers": {
       "enabled": true,
       "kicker": "SELECTED OFFERS",
-      "ar": "عروض مختارة على احتياجات زراعية",
-      "en": "Selected value across agricultural essentials",
-      "copy_ar": "تصفح المنتجات التي يظهر عليها سعر سابق وسعر حالي داخل الكتالوج، مع وصول مباشر للقسم والمنتج.",
-      "copy_en": "Browse catalog items that currently show a previous and current price, with direct paths to category and product.",
+      "ar": "عروض مختارة على منتجات أساسية",
+      "en": "Selected value on agricultural essentials",
+      "copy_ar": "اكتشف المنتجات التي عليها سعر مخفّض حاليًا، وانتقل مباشرة للقسم أو صفحة المنتج.",
+      "copy_en": "Explore products currently showing a reduced price and move directly to the category or product page.",
       "cta_ar": "تصفح العروض",
       "cta_en": "Browse offers",
       "target": "offers.html"
@@ -15,10 +15,10 @@
     "season-start": {
       "enabled": true,
       "kicker": "SEASON START",
-      "ar": "بداية مرتبة للموسم",
-      "en": "A cleaner start to the season",
-      "copy_ar": "مسار تجاري يجمع البذور والتغذية والري في صفحة واحدة لتقليل خطوات التصفح.",
-      "copy_en": "A commercial path bringing seeds, nutrition and irrigation into one page to reduce browsing steps.",
+      "ar": "ابدأ الموسم بالأساسيات",
+      "en": "Start the season with the essentials",
+      "copy_ar": "اختيارات من البذور والتغذية والري تساعدك تجمع احتياجات البداية في مسار واحد.",
+      "copy_en": "Selections across seeds, nutrition and irrigation help bring season-start essentials into one path.",
       "cats": [
         "seeds",
         "fertilizers",
@@ -28,10 +28,10 @@
     "farm-orders": {
       "enabled": true,
       "kicker": "FARM & B2B",
-      "ar": "طلبات المزارع والشركات",
-      "en": "Farm and business ordering",
-      "copy_ar": "طلب سريع للكميات وقوائم محفوظة ومسار عرض سعر للطلبات الأكبر.",
-      "copy_en": "Quick quantity ordering, saved lists and a quote path for larger orders.",
+      "ar": "طلبات الكميات والمشروعات",
+      "en": "Volume and project ordering",
+      "copy_ar": "طلب سريع للكميات، قوائم محفوظة للاحتياجات المتكررة، ومسار لطلب عرض سعر.",
+      "copy_en": "Quick quantity ordering, saved lists for repeat needs and a dedicated quote-request path.",
       "cats": [
         "tools",
         "irrigation",

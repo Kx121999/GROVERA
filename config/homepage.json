@@ -1,19 +1,19 @@
 {
   "hero": {
-    "kicker": "GOLDEN ROOTS · UAE",
-    "titleAr": "مستلزمات زراعية بترتيب يخلي القرار أسهل.",
-    "titleEn": "Agricultural supplies, structured to make selection easier.",
-    "copyAr": "من البذور والتغذية إلى الحماية والري والأدوات — تجربة تجارية واحدة مرتبة للأفراد والمزارع والشركات.",
-    "copyEn": "From seeds and nutrition to protection, irrigation and tools — one commercial experience for individuals, farms and businesses.",
+    "kicker": "GOLDEN ROOTS · AGRICULTURE & SUPPLIES",
+    "titleAr": "كل ما تحتاجه للزراعة، في تجربة أوضح.",
+    "titleEn": "Agricultural essentials, in one clearer experience.",
+    "copyAr": "بذور، تغذية، حماية، ري وأدوات — اختيارات مرتبة للأفراد والمزارع والشركات، مع وصول أسرع للمنتج المناسب.",
+    "copyEn": "Seeds, nutrition, crop protection, irrigation and tools — clearly organized for individuals, farms and businesses, with a faster path to the right product.",
     "image": "assets/golden-roots-hero.webp",
     "primary": {
-      "labelAr": "تصفح المنتجات",
-      "labelEn": "Browse products",
+      "labelAr": "تصفح المتجر",
+      "labelEn": "Shop the catalog",
       "href": "collection.html"
     },
     "secondary": {
-      "labelAr": "شوف العروض",
-      "labelEn": "View offers",
+      "labelAr": "اكتشف العروض",
+      "labelEn": "Explore offers",
       "href": "offers.html"
     }
   },
@@ -79,91 +79,91 @@
   "recentLimit": 4,
   "sectionCopy": {
     "paths": {
-      "kicker": "COMMERCIAL PATHS",
-      "titleAr": "ادخل من الطريق الأقرب لاحتياجك",
-      "titleEn": "Enter through the path closest to your need",
-      "copyAr": "منتجات، عروض، أو طلب كميات — كل مسار له صفحة واضحة بدل ما كل شيء يبقى في مكان واحد.",
-      "copyEn": "Products, offers or volume ordering — each path has a clear destination instead of crowding everything together."
+      "kicker": "START HERE",
+      "titleAr": "ابدأ من احتياجك",
+      "titleEn": "Start with what you need",
+      "copyAr": "تسوق مباشر، عروض مختارة، أو طلب كميات — اختر المسار الأقرب لك ووصل لطلبك بخطوات أقل.",
+      "copyEn": "Shop directly, explore selected offers or place a volume order — choose the path that fits and reach your order in fewer steps."
     },
     "categories": {
       "kicker": "SHOP BY CATEGORY",
-      "titleAr": "الكتالوج متقسم عشان توصل أسرع",
-      "titleEn": "A catalog divided for faster discovery"
+      "titleAr": "أقسام واضحة لبحث أسرع",
+      "titleEn": "Clear categories for faster discovery"
     },
     "featured": {
-      "kicker": "FEATURED PRODUCTS",
-      "titleAr": "منتجات مختارة من الكتالوج",
-      "titleEn": "Selected products from the catalog",
-      "copyAr": "بطاقات أبسط تركز على السعر والتوفر والقرار الأساسي.",
-      "copyEn": "Cleaner product cards focused on price, availability and the primary action."
+      "kicker": "FEATURED SELECTION",
+      "titleAr": "اختيارات مميزة من المتجر",
+      "titleEn": "Featured picks from the store",
+      "copyAr": "منتجات من أقسام مختلفة مع السعر والتوفر والمعلومة الأساسية في مكان واضح.",
+      "copyEn": "Products across key categories with price, availability and essential information surfaced clearly."
     },
     "b2b": {
       "kicker": "FARM & B2B",
-      "titleAr": "للطلبات الكبيرة، فيه مسار أقصر.",
-      "titleEn": "For larger orders, there is a shorter path.",
-      "copyAr": "الطلب السريع وقوائم المزرعة وطلب عرض السعر موجودين بعيد عن رحلة التسوق العادية عشان كل عميل ياخد المسار المناسب.",
-      "copyEn": "Quick Order, Farm Lists and Request Quote live outside the standard retail flow so every customer gets the right path."
+      "titleAr": "طلبات المزارع والشركات، بخطوات أقل.",
+      "titleEn": "Farm and business orders, with fewer steps.",
+      "copyAr": "للكميات والطلبات المتكررة، استخدم الطلب السريع أو جهّز طلب عرض سعر بدل المرور برحلة التسوق العادية.",
+      "copyEn": "For volume and repeat orders, use Quick Order or prepare a quote request instead of following the standard retail flow."
     },
     "offers": {
       "kicker": "SELECTED OFFERS",
-      "titleAr": "عروض موجودة فعليًا داخل الكتالوج",
-      "titleEn": "Offers currently represented in the catalog"
+      "titleAr": "عروض مختارة على منتجات أساسية",
+      "titleEn": "Selected value on agricultural essentials"
     },
     "trust": {
-      "kicker": "TRUST CENTER",
-      "titleAr": "الثقة جزء من رحلة الشراء",
-      "titleEn": "Trust is part of the buying journey"
+      "kicker": "SHOP WITH CLARITY",
+      "titleAr": "معلومات أوضح قبل قرار الشراء",
+      "titleEn": "More clarity before you buy"
     },
     "brandAuthority": {
-      "kicker": "BRAND AUTHORITY",
-      "titleAr": "GOLDEN ROOTS مش مجرد Grid منتجات.",
-      "titleEn": "GOLDEN ROOTS is more than a product grid.",
-      "copyAr": "الهوية، الكتالوج، الطلبات، العروض وخدمة المزارع متجمعة داخل بنية واحدة تخلي الشركة تظهر كعلامة تجارية متماسكة.",
-      "copyEn": "Identity, catalog, ordering, offers and farm service are combined into one structure that presents the company as a coherent brand."
+      "kicker": "GOLDEN ROOTS",
+      "titleAr": "احتياجات الزراعة في مكان واحد، بهوية واحدة.",
+      "titleEn": "Agricultural essentials in one place, under one clear brand.",
+      "copyAr": "من التصفح إلى الطلب، جولدن روتس تجمع الأقسام والعروض وخيارات الكميات داخل تجربة متماسكة وسهلة الاستخدام.",
+      "copyEn": "From discovery to ordering, Golden Roots brings categories, offers and volume-order options into one cohesive, easy-to-use experience."
     },
     "recent": {
       "kicker": "RECENTLY VIEWED",
-      "titleAr": "كمّل من حيث وقفت",
-      "titleEn": "Continue where you left off"
+      "titleAr": "ارجع لاختياراتك بسرعة",
+      "titleEn": "Return to your recent picks"
     }
   },
   "trust": [
     {
       "icon": "01",
-      "ar": "كتالوج منظم",
-      "en": "Structured catalog",
-      "copy_ar": "الأقسام والبحث والفلاتر مبنية لتقليل وقت الوصول للمنتج.",
-      "copy_en": "Categories, search and filters are built to reduce time-to-product."
+      "ar": "اختيار أسهل",
+      "en": "Easier selection",
+      "copy_ar": "أقسام وبحث وفلاتر تساعدك توصل للمنتج المناسب بسرعة.",
+      "copy_en": "Categories, search and filters help you reach the right product faster."
     },
     {
       "icon": "02",
-      "ar": "طلبات أفراد ومزارع",
-      "en": "Retail & farm flows",
-      "copy_ar": "مسار شراء عادي ومسار طلب سريع وقوائم للطلبات المتكررة.",
-      "copy_en": "Standard shopping plus quick order and reusable lists for repeat needs."
+      "ar": "للأفراد والمزارع",
+      "en": "Retail & farm orders",
+      "copy_ar": "تسوق عادي، طلب سريع، وقوائم محفوظة للاحتياجات المتكررة.",
+      "copy_en": "Standard shopping, quick ordering and saved lists for repeat needs."
     },
     {
       "icon": "03",
-      "ar": "شفافية التوفر والسعر",
-      "en": "Clear price & availability",
-      "copy_ar": "السعر وحالة التوفر تظهران قبل دخول العميل في خطوات الطلب.",
-      "copy_en": "Price and availability are surfaced before the customer enters ordering steps."
+      "ar": "سعر وتوفر واضح",
+      "en": "Clear price & stock",
+      "copy_ar": "السعر وحالة التوفر ظاهرين قبل إضافة المنتج للسلة.",
+      "copy_en": "Price and availability are visible before you add an item to cart."
     },
     {
       "icon": "04",
       "ar": "عربي وإنجليزي",
       "en": "Arabic & English",
-      "copy_ar": "تجربة RTL وLTR من نفس الكتالوج ونفس الصفحات.",
-      "copy_en": "RTL and LTR experiences from the same catalog and pages."
+      "copy_ar": "نفس تجربة التسوق متاحة بالعربي والإنجليزي.",
+      "copy_en": "The same shopping experience is available in Arabic and English."
     }
   ],
   "categoryIntros": {
     "seeds": {
       "kicker": "SEEDS",
-      "ar": "ابدأ باختيار البذور بشكل أوضح",
-      "en": "Start with a clearer seed selection",
-      "copy_ar": "تصفح البذور حسب المحصول والعبوة، ثم انتقل للمنتج مباشرة بدون زحمة معلومات.",
-      "copy_en": "Browse seeds by crop and pack, then move directly to the product without unnecessary clutter.",
+      "ar": "اختيار البذور يبدأ من المحصول",
+      "en": "Seed selection starts with the crop",
+      "copy_ar": "تصفح حسب المحصول والعبوة، وقارن الخيارات قبل فتح تفاصيل المنتج.",
+      "copy_en": "Browse by crop and pack, then compare options before opening product details.",
       "points_ar": [
         "حسب المحصول",
         "حسب العبوة",
@@ -177,10 +177,10 @@
     },
     "fertilizers": {
       "kicker": "NUTRITION",
-      "ar": "التغذية في كتالوج مرتب",
-      "en": "Nutrition in a structured catalog",
-      "copy_ar": "قارن التركيبات والأحجام والأسعار داخل مسار واضح، مع إبقاء تفاصيل المنتج في مكانها الصحيح.",
-      "copy_en": "Compare formulations, sizes and prices in a clean path while keeping product detail where it belongs.",
+      "ar": "التغذية مرتبة حسب التركيبة والحجم",
+      "en": "Nutrition organized by formulation and size",
+      "copy_ar": "قارن التركيبات والأحجام والأسعار، واستخدم الفلاتر للوصول لاختيارك بسرعة.",
+      "copy_en": "Compare formulations, sizes and prices, then use filters to narrow the selection quickly.",
       "points_ar": [
         "تركيبات واضحة",
         "أحجام مختلفة",
@@ -211,8 +211,8 @@
     },
     "irrigation": {
       "kicker": "IRRIGATION",
-      "ar": "الري والتوصيلات في مسار واحد",
-      "en": "Irrigation and fittings in one path",
+      "ar": "مكونات الري والتوصيلات في مكان واحد",
+      "en": "Irrigation components and fittings in one place",
       "copy_ar": "من النقاطات والوصلات إلى مكونات التجهيز، مع بحث سريع وطلب كميات للمشروعات.",
       "copy_en": "From emitters and fittings to setup components, with faster search and volume ordering for projects.",
       "points_ar": [
@@ -228,8 +228,8 @@
     },
     "tools": {
       "kicker": "TOOLS",
-      "ar": "أدوات واضحة للمهمة",
-      "en": "Tools matched to the job",
+      "ar": "الأداة المناسبة تبدأ من مواصفات واضحة",
+      "en": "The right tool starts with clear specifications",
       "copy_ar": "تصفح الأدوات والمعدات ببطاقات مختصرة، مع المواصفات الأساسية والسعر والتوفر في المقدمة.",
       "copy_en": "Browse tools and equipment with concise cards that surface key specs, price and availability.",
       "points_ar": [

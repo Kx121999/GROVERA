@@ -3,50 +3,50 @@
     "kicker": "ABOUT",
     "titleAr": "من نحن",
     "titleEn": "About Golden Roots",
-    "copyAr": "جولدن روتس للزراعة ومستلزماتها تبني تجربة تجمع الكتالوج، العروض، طلبات الأفراد وطلبات المزارع والشركات في هوية واحدة واضحة.",
-    "copyEn": "Golden Roots Agriculture & Supplies brings catalog, offers, retail ordering and farm/business ordering into one clear brand experience."
+    "copyAr": "جولدن روتس للزراعة ومستلزماتها تقدّم تجربة شراء تجمع البذور والتغذية وحماية المحاصيل والري والأدوات داخل كتالوج واضح يخدم الأفراد والمزارع والشركات.",
+    "copyEn": "Golden Roots Agriculture & Supplies brings seeds, nutrition, crop protection, irrigation and tools into a clear shopping experience for individuals, farms and businesses."
   },
   "contact": {
     "kicker": "CONTACT",
     "titleAr": "تواصل معنا",
     "titleEn": "Contact us",
-    "copyAr": "للاستفسارات العامة استخدم النموذج. للطلبات الكبيرة استخدم صفحة المزارع والشركات.",
-    "copyEn": "Use the form for general enquiries. For larger orders, use the Farm & B2B page."
+    "copyAr": "للاستفسارات العامة استخدم نموذج التواصل، وللكميات والمشروعات انتقل مباشرة إلى مسار المزارع والشركات.",
+    "copyEn": "Use the contact form for general enquiries, and go directly to Farm & B2B for volume orders and projects."
   },
   "shipping": {
     "kicker": "SHIPPING",
     "titleAr": "الشحن والتوصيل",
     "titleEn": "Shipping & Delivery",
-    "copyAr": "الموقع مجهز لعرض خيارات الشحن لكل الإمارات. الرسوم والمدد النهائية تعتمد عند تشغيل المتجر فعليًا.",
-    "copyEn": "The site is prepared for UAE-wide shipping options. Final rates and delivery times are approved when live operations begin."
+    "copyAr": "يتم تجهيز تجربة التوصيل لتغطية الإمارات السبع. عند تفعيل الخدمة، ستظهر رسوم ومدة التوصيل بوضوح قبل إتمام الطلب.",
+    "copyEn": "The delivery experience is prepared for all seven emirates. Once enabled, delivery rates and timing will be shown clearly before checkout."
   },
   "returns": {
     "kicker": "RETURNS",
     "titleAr": "الاسترجاع والاستبدال",
     "titleEn": "Returns & Exchanges",
-    "copyAr": "تم تجهيز الصفحة ومسارها، ويُعتمد النص النهائي للاسترجاع والاستبدال من الشركة قبل الإطلاق.",
-    "copyEn": "The page and flow are prepared; the company approves the final returns and exchanges policy before launch."
+    "copyAr": "ستوضح سياسة الاسترجاع والاستبدال الحالات المؤهلة، المدة، وحالة المنتج المطلوبة. يتم نشر الشروط المعتمدة قبل بدء البيع الفعلي.",
+    "copyEn": "The returns and exchanges policy will define eligible cases, time limits and required product condition. Approved terms are published before live selling begins."
   },
   "privacy": {
     "kicker": "PRIVACY",
     "titleAr": "سياسة الخصوصية",
     "titleEn": "Privacy Policy",
-    "copyAr": "تم تجهيز بنية سياسة الخصوصية، ويجب اعتماد النص القانوني النهائي حسب طريقة تشغيل الموقع والخدمات المتصلة به.",
-    "copyEn": "The privacy-policy structure is prepared; final legal wording must match the live site's connected services and operations."
+    "copyAr": "توضح سياسة الخصوصية كيفية التعامل مع بيانات التواصل والطلبات والخدمات المرتبطة بالموقع. يتم نشر النص القانوني المعتمد قبل التشغيل الفعلي.",
+    "copyEn": "The privacy policy explains how contact, order and connected-service data are handled. Approved legal wording is published before live operation."
   },
   "terms": {
     "kicker": "TERMS",
     "titleAr": "الشروط والأحكام",
     "titleEn": "Terms & Conditions",
-    "copyAr": "تم تجهيز بنية الشروط والأحكام، ويُعتمد النص القانوني والتجاري النهائي قبل الإطلاق العام.",
-    "copyEn": "The terms structure is prepared; final legal and commercial wording is approved before public launch."
+    "copyAr": "توضح الشروط والأحكام قواعد استخدام الموقع والطلبات والأسعار والتوصيل والخدمات. يتم نشر الصياغة القانونية والتجارية المعتمدة قبل بدء البيع.",
+    "copyEn": "Terms and conditions cover site use, orders, pricing, delivery and services. Approved legal and commercial wording is published before live selling begins."
   },
   "faq": [
     {
       "qAr": "هل التوصيل متاح داخل كل الإمارات؟",
       "qEn": "Is delivery available across all emirates?",
-      "aAr": "الموقع مجهز لاختيار أي إمارة من الإمارات السبع، وتظهر رسوم ومدة التوصيل النهائية عند اعتماد التشغيل.",
-      "aEn": "The site supports all seven emirates; final delivery rates and timing are shown when operations are enabled."
+      "aAr": "تم تجهيز اختيار الإمارات السبع داخل تجربة الطلب. رسوم ومدة التوصيل ستظهر عند تفعيل خدمة التوصيل.",
+      "aEn": "All seven emirates are supported in the ordering experience. Delivery rates and timing will appear once delivery service is enabled."
     },
     {
       "qAr": "هل يمكن طلب كميات للمزرعة أو الشركة؟",
@@ -83,14 +83,14 @@
     {
       "qAr": "هل الدفع الإلكتروني يعمل الآن؟",
       "qEn": "Is online payment live now?",
-      "aAr": "لا. صفحة إتمام الطلب الحالية تعرض تجربة الواجهة فقط إلى أن يتم ربط مزود دفع حقيقي.",
-      "aEn": "No. The current checkout demonstrates the interface until a real payment provider is connected."
+      "aAr": "لا، الدفع الإلكتروني غير مفعل حاليًا. لن يتم تحصيل أي مبلغ من خلال نسخة الموقع الحالية.",
+      "aEn": "No. Online payment is not enabled yet, and the current site does not collect payments."
     },
     {
       "qAr": "هل السياسات نهائية؟",
       "qEn": "Are the policies final?",
-      "aAr": "تصميم صفحات الشحن والاسترجاع والخصوصية جاهز، أما النصوص التشغيلية والقانونية النهائية فتُعتمد من الشركة قبل الإطلاق.",
-      "aEn": "Shipping, returns and privacy page designs are ready; final operational and legal wording must be approved by the company before launch."
+      "aAr": "صفحات السياسات موجودة، وتُنشر الصياغات القانونية والتشغيلية المعتمدة قبل بدء البيع الفعلي.",
+      "aEn": "Policy pages are in place; approved legal and operational wording is published before live selling begins."
     }
   ]
 }
