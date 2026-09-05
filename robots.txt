@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-# Preview HTML is noindex by default. Enable production SEO only after the real domain is known.
+Disallow: /

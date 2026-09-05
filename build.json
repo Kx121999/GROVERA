@@ -1,6 +1,7 @@
 {
-  "version": "23.0.0",
-  "build": "d4606f1337",
-  "css": "gr-v23.a153fa85b1ce.css",
-  "js": "gr-v23.bb1f17aa92e3.js"
+  "version": "24.0.0",
+  "release": "Release 24.0",
+  "build": "3b8a834c85",
+  "css": "gr-v24.8f60c3b875e4.css",
+  "js": "gr-v24.2e57ee0f252a.js"
 }
