@@ -22,55 +22,91 @@
       "id": "hero",
       "enabled": true,
       "labelAr": "الواجهة الرئيسية",
-      "labelEn": "Hero"
+      "labelEn": "Hero",
+      "instanceId": "hero-1",
+      "layout": "cinematic",
+      "background": "default",
+      "columns": 1
     },
     {
       "id": "paths",
       "enabled": true,
       "labelAr": "مسارات الشراء",
-      "labelEn": "Commercial paths"
+      "labelEn": "Commercial paths",
+      "instanceId": "paths-2",
+      "layout": "cards",
+      "background": "default",
+      "columns": 3
     },
     {
       "id": "categories",
       "enabled": true,
       "labelAr": "الأقسام",
-      "labelEn": "Categories"
+      "labelEn": "Categories",
+      "instanceId": "categories-3",
+      "layout": "mosaic",
+      "background": "default",
+      "columns": 3
     },
     {
       "id": "featured",
       "enabled": true,
       "labelAr": "منتجات مختارة",
-      "labelEn": "Featured products"
+      "labelEn": "Featured products",
+      "instanceId": "featured-4",
+      "layout": "grid",
+      "background": "default",
+      "columns": 4
     },
     {
       "id": "b2b",
       "enabled": true,
       "labelAr": "المزارع والشركات",
-      "labelEn": "Farm & B2B"
+      "labelEn": "Farm & B2B",
+      "instanceId": "b2b-5",
+      "layout": "split",
+      "background": "default",
+      "columns": 2
     },
     {
       "id": "offers",
       "enabled": true,
       "labelAr": "العروض",
-      "labelEn": "Offers"
+      "labelEn": "Offers",
+      "instanceId": "offers-6",
+      "layout": "grid",
+      "background": "default",
+      "columns": 4
     },
     {
       "id": "trust",
       "enabled": true,
       "labelAr": "الثقة",
-      "labelEn": "Trust"
+      "labelEn": "Trust",
+      "instanceId": "trust-7",
+      "layout": "grid",
+      "background": "default",
+      "columns": 4
     },
     {
       "id": "brandAuthority",
       "enabled": true,
       "labelAr": "قوة العلامة",
-      "labelEn": "Brand authority"
+      "labelEn": "Brand authority",
+      "instanceId": "brandAuthority-8",
+      "layout": "split",
+      "background": "default",
+      "columns": 2
     },
     {
       "id": "recent",
       "enabled": true,
       "labelAr": "شوهد مؤخرًا",
-      "labelEn": "Recently viewed"
+      "labelEn": "Recently viewed",
+      "instanceId": "recent-9",
+      "layout": "grid",
+      "background": "default",
+      "columns": 4
     }
   ],
   "featuredLimit": 8,
