@@ -1,0 +1,12 @@
+{
+  "GOLDEN ROOTS": {
+    "enabled": true,
+    "name": "GOLDEN ROOTS",
+    "logo": "assets/golden-roots-logo.webp",
+    "titleAr": "جولدن روتس للزراعة ومستلزماتها",
+    "titleEn": "Golden Roots Agriculture & Supplies",
+    "copyAr": "علامة زراعية تجمع المنتجات والعروض ومسارات الطلب في تجربة واحدة واضحة.",
+    "copyEn": "An agricultural brand bringing products, offers and ordering paths into one clear experience.",
+    "featured": true
+  }
+}

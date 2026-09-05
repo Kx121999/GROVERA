@@ -1,0 +1,52 @@
+{
+  "version": 21,
+  "siteName": "GOLDEN ROOTS",
+  "legalNameAr": "جولدن روتس للزراعة ومستلزماتها",
+  "legalNameEn": "Golden Roots Agriculture & Supplies",
+  "taglineAr": "اختيارات أوضح. طلب أسرع. حضور أقوى.",
+  "taglineEn": "Clearer choices. Faster ordering. Stronger brand experience.",
+  "country": "AE",
+  "countryLabelAr": "الإمارات",
+  "countryLabelEn": "UAE",
+  "currency": "AED",
+  "defaultLanguage": "ar",
+  "languages": [
+    "ar",
+    "en"
+  ],
+  "logo": "assets/golden-roots-logo.webp",
+  "mark": "assets/golden-roots-mark.webp",
+  "heroImage": "assets/golden-roots-hero.webp",
+  "seoIndexable": false,
+  "baseUrl": "",
+  "socialImage": "assets/golden-roots-hero.webp",
+  "promoEnabled": true,
+  "contact": {
+    "phone": "",
+    "whatsapp": "",
+    "email": "",
+    "addressAr": "",
+    "addressEn": "",
+    "hoursAr": "",
+    "hoursEn": ""
+  },
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "linkedin": ""
+  },
+  "commerce": {
+    "freeShippingThreshold": 0,
+    "deliveryCopyAr": "تظهر رسوم ومدة التوصيل النهائية عند اعتماد التشغيل.",
+    "deliveryCopyEn": "Final delivery rates and timing appear when operations are enabled."
+  },
+  "theme": {
+    "primary": "#073f18",
+    "primary2": "#0A4B1B",
+    "leaf": "#70A32E",
+    "gold": "#C29D36",
+    "cream": "#F7F5EC",
+    "radius": "18px"
+  }
+}

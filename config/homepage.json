@@ -1,0 +1,288 @@
+{
+  "hero": {
+    "kicker": "GOLDEN ROOTS · UAE",
+    "titleAr": "مستلزمات زراعية بترتيب يخلي القرار أسهل.",
+    "titleEn": "Agricultural supplies, structured to make selection easier.",
+    "copyAr": "من البذور والتغذية إلى الحماية والري والأدوات — تجربة تجارية واحدة مرتبة للأفراد والمزارع والشركات.",
+    "copyEn": "From seeds and nutrition to protection, irrigation and tools — one commercial experience for individuals, farms and businesses.",
+    "image": "assets/golden-roots-hero.webp",
+    "primary": {
+      "labelAr": "تصفح المنتجات",
+      "labelEn": "Browse products",
+      "href": "collection.html"
+    },
+    "secondary": {
+      "labelAr": "شوف العروض",
+      "labelEn": "View offers",
+      "href": "offers.html"
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "enabled": true,
+      "labelAr": "الواجهة الرئيسية",
+      "labelEn": "Hero"
+    },
+    {
+      "id": "paths",
+      "enabled": true,
+      "labelAr": "مسارات الشراء",
+      "labelEn": "Commercial paths"
+    },
+    {
+      "id": "categories",
+      "enabled": true,
+      "labelAr": "الأقسام",
+      "labelEn": "Categories"
+    },
+    {
+      "id": "featured",
+      "enabled": true,
+      "labelAr": "منتجات مختارة",
+      "labelEn": "Featured products"
+    },
+    {
+      "id": "b2b",
+      "enabled": true,
+      "labelAr": "المزارع والشركات",
+      "labelEn": "Farm & B2B"
+    },
+    {
+      "id": "offers",
+      "enabled": true,
+      "labelAr": "العروض",
+      "labelEn": "Offers"
+    },
+    {
+      "id": "trust",
+      "enabled": true,
+      "labelAr": "الثقة",
+      "labelEn": "Trust"
+    },
+    {
+      "id": "brandAuthority",
+      "enabled": true,
+      "labelAr": "قوة العلامة",
+      "labelEn": "Brand authority"
+    },
+    {
+      "id": "recent",
+      "enabled": true,
+      "labelAr": "شوهد مؤخرًا",
+      "labelEn": "Recently viewed"
+    }
+  ],
+  "featuredLimit": 8,
+  "offersLimit": 4,
+  "campaignLimit": 3,
+  "recentLimit": 4,
+  "sectionCopy": {
+    "paths": {
+      "kicker": "COMMERCIAL PATHS",
+      "titleAr": "ادخل من الطريق الأقرب لاحتياجك",
+      "titleEn": "Enter through the path closest to your need",
+      "copyAr": "منتجات، عروض، أو طلب كميات — كل مسار له صفحة واضحة بدل ما كل شيء يبقى في مكان واحد.",
+      "copyEn": "Products, offers or volume ordering — each path has a clear destination instead of crowding everything together."
+    },
+    "categories": {
+      "kicker": "SHOP BY CATEGORY",
+      "titleAr": "الكتالوج متقسم عشان توصل أسرع",
+      "titleEn": "A catalog divided for faster discovery"
+    },
+    "featured": {
+      "kicker": "FEATURED PRODUCTS",
+      "titleAr": "منتجات مختارة من الكتالوج",
+      "titleEn": "Selected products from the catalog",
+      "copyAr": "بطاقات أبسط تركز على السعر والتوفر والقرار الأساسي.",
+      "copyEn": "Cleaner product cards focused on price, availability and the primary action."
+    },
+    "b2b": {
+      "kicker": "FARM & B2B",
+      "titleAr": "للطلبات الكبيرة، فيه مسار أقصر.",
+      "titleEn": "For larger orders, there is a shorter path.",
+      "copyAr": "الطلب السريع وقوائم المزرعة وطلب عرض السعر موجودين بعيد عن رحلة التسوق العادية عشان كل عميل ياخد المسار المناسب.",
+      "copyEn": "Quick Order, Farm Lists and Request Quote live outside the standard retail flow so every customer gets the right path."
+    },
+    "offers": {
+      "kicker": "SELECTED OFFERS",
+      "titleAr": "عروض موجودة فعليًا داخل الكتالوج",
+      "titleEn": "Offers currently represented in the catalog"
+    },
+    "trust": {
+      "kicker": "TRUST CENTER",
+      "titleAr": "الثقة جزء من رحلة الشراء",
+      "titleEn": "Trust is part of the buying journey"
+    },
+    "brandAuthority": {
+      "kicker": "BRAND AUTHORITY",
+      "titleAr": "GOLDEN ROOTS مش مجرد Grid منتجات.",
+      "titleEn": "GOLDEN ROOTS is more than a product grid.",
+      "copyAr": "الهوية، الكتالوج، الطلبات، العروض وخدمة المزارع متجمعة داخل بنية واحدة تخلي الشركة تظهر كعلامة تجارية متماسكة.",
+      "copyEn": "Identity, catalog, ordering, offers and farm service are combined into one structure that presents the company as a coherent brand."
+    },
+    "recent": {
+      "kicker": "RECENTLY VIEWED",
+      "titleAr": "كمّل من حيث وقفت",
+      "titleEn": "Continue where you left off"
+    }
+  },
+  "trust": [
+    {
+      "icon": "01",
+      "ar": "كتالوج منظم",
+      "en": "Structured catalog",
+      "copy_ar": "الأقسام والبحث والفلاتر مبنية لتقليل وقت الوصول للمنتج.",
+      "copy_en": "Categories, search and filters are built to reduce time-to-product."
+    },
+    {
+      "icon": "02",
+      "ar": "طلبات أفراد ومزارع",
+      "en": "Retail & farm flows",
+      "copy_ar": "مسار شراء عادي ومسار طلب سريع وقوائم للطلبات المتكررة.",
+      "copy_en": "Standard shopping plus quick order and reusable lists for repeat needs."
+    },
+    {
+      "icon": "03",
+      "ar": "شفافية التوفر والسعر",
+      "en": "Clear price & availability",
+      "copy_ar": "السعر وحالة التوفر تظهران قبل دخول العميل في خطوات الطلب.",
+      "copy_en": "Price and availability are surfaced before the customer enters ordering steps."
+    },
+    {
+      "icon": "04",
+      "ar": "عربي وإنجليزي",
+      "en": "Arabic & English",
+      "copy_ar": "تجربة RTL وLTR من نفس الكتالوج ونفس الصفحات.",
+      "copy_en": "RTL and LTR experiences from the same catalog and pages."
+    }
+  ],
+  "categoryIntros": {
+    "seeds": {
+      "kicker": "SEEDS",
+      "ar": "ابدأ باختيار البذور بشكل أوضح",
+      "en": "Start with a clearer seed selection",
+      "copy_ar": "تصفح البذور حسب المحصول والعبوة، ثم انتقل للمنتج مباشرة بدون زحمة معلومات.",
+      "copy_en": "Browse seeds by crop and pack, then move directly to the product without unnecessary clutter.",
+      "points_ar": [
+        "حسب المحصول",
+        "حسب العبوة",
+        "بحث بالاسم أو SKU"
+      ],
+      "points_en": [
+        "By crop",
+        "By pack",
+        "Search by name or SKU"
+      ]
+    },
+    "fertilizers": {
+      "kicker": "NUTRITION",
+      "ar": "التغذية في كتالوج مرتب",
+      "en": "Nutrition in a structured catalog",
+      "copy_ar": "قارن التركيبات والأحجام والأسعار داخل مسار واضح، مع إبقاء تفاصيل المنتج في مكانها الصحيح.",
+      "copy_en": "Compare formulations, sizes and prices in a clean path while keeping product detail where it belongs.",
+      "points_ar": [
+        "تركيبات واضحة",
+        "أحجام مختلفة",
+        "فلترة بالسعر والتوفر"
+      ],
+      "points_en": [
+        "Clear formulations",
+        "Multiple sizes",
+        "Price & stock filters"
+      ]
+    },
+    "pesticides": {
+      "kicker": "CROP PROTECTION",
+      "ar": "حماية المحصول باختيار مسؤول",
+      "en": "Crop protection with responsible selection",
+      "copy_ar": "تصفح منتجات الحماية حسب الفئة، واقرأ بيانات المنتج واتبع الملصق والتوصيات المعتمدة قبل الاستخدام.",
+      "copy_en": "Browse crop-protection products by category, read product data and follow the label and approved recommendations before use.",
+      "points_ar": [
+        "بيانات المنتج أولاً",
+        "فلترة حسب الفئة",
+        "تنبيه استخدام واضح"
+      ],
+      "points_en": [
+        "Product data first",
+        "Filter by category",
+        "Clear use notice"
+      ]
+    },
+    "irrigation": {
+      "kicker": "IRRIGATION",
+      "ar": "الري والتوصيلات في مسار واحد",
+      "en": "Irrigation and fittings in one path",
+      "copy_ar": "من النقاطات والوصلات إلى مكونات التجهيز، مع بحث سريع وطلب كميات للمشروعات.",
+      "copy_en": "From emitters and fittings to setup components, with faster search and volume ordering for projects.",
+      "points_ar": [
+        "مكونات وتجهيزات",
+        "بحث سريع",
+        "طلب كميات"
+      ],
+      "points_en": [
+        "Components & setup",
+        "Fast search",
+        "Volume ordering"
+      ]
+    },
+    "tools": {
+      "kicker": "TOOLS",
+      "ar": "أدوات واضحة للمهمة",
+      "en": "Tools matched to the job",
+      "copy_ar": "تصفح الأدوات والمعدات ببطاقات مختصرة، مع المواصفات الأساسية والسعر والتوفر في المقدمة.",
+      "copy_en": "Browse tools and equipment with concise cards that surface key specs, price and availability.",
+      "points_ar": [
+        "مواصفات أساسية",
+        "سعر واضح",
+        "توفر مباشر"
+      ],
+      "points_en": [
+        "Key specs",
+        "Clear price",
+        "Live availability"
+      ]
+    },
+    "greenhouses": {
+      "kicker": "GREENHOUSES",
+      "ar": "مستلزمات البيوت المحمية",
+      "en": "Greenhouse essentials",
+      "copy_ar": "مسار مخصص للتجهيزات والمستلزمات مع وصول سريع لطلبات المشاريع والكميات.",
+      "copy_en": "A dedicated path for greenhouse supplies with quick access to project and volume-order flows.",
+      "points_ar": [
+        "مستلزمات المشروع",
+        "كميات ومشروعات",
+        "تواصل مباشر"
+      ],
+      "points_en": [
+        "Project essentials",
+        "Volume & projects",
+        "Direct contact"
+      ]
+    }
+  },
+  "crossSell": {
+    "seeds": [
+      "fertilizers",
+      "irrigation"
+    ],
+    "fertilizers": [
+      "tools",
+      "irrigation"
+    ],
+    "pesticides": [
+      "tools"
+    ],
+    "irrigation": [
+      "tools",
+      "greenhouses"
+    ],
+    "tools": [
+      "irrigation"
+    ],
+    "greenhouses": [
+      "irrigation",
+      "tools"
+    ]
+  }
+}

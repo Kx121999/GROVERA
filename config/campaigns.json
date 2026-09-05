@@ -1,0 +1,42 @@
+{
+  "activeCampaign": "selected-offers",
+  "campaigns": {
+    "selected-offers": {
+      "enabled": true,
+      "kicker": "SELECTED OFFERS",
+      "ar": "عروض مختارة على احتياجات زراعية",
+      "en": "Selected value across agricultural essentials",
+      "copy_ar": "تصفح المنتجات التي يظهر عليها سعر سابق وسعر حالي داخل الكتالوج، مع وصول مباشر للقسم والمنتج.",
+      "copy_en": "Browse catalog items that currently show a previous and current price, with direct paths to category and product.",
+      "cta_ar": "تصفح العروض",
+      "cta_en": "Browse offers",
+      "target": "offers.html"
+    },
+    "season-start": {
+      "enabled": true,
+      "kicker": "SEASON START",
+      "ar": "بداية مرتبة للموسم",
+      "en": "A cleaner start to the season",
+      "copy_ar": "مسار تجاري يجمع البذور والتغذية والري في صفحة واحدة لتقليل خطوات التصفح.",
+      "copy_en": "A commercial path bringing seeds, nutrition and irrigation into one page to reduce browsing steps.",
+      "cats": [
+        "seeds",
+        "fertilizers",
+        "irrigation"
+      ]
+    },
+    "farm-orders": {
+      "enabled": true,
+      "kicker": "FARM & B2B",
+      "ar": "طلبات المزارع والشركات",
+      "en": "Farm and business ordering",
+      "copy_ar": "طلب سريع للكميات وقوائم محفوظة ومسار عرض سعر للطلبات الأكبر.",
+      "copy_en": "Quick quantity ordering, saved lists and a quote path for larger orders.",
+      "cats": [
+        "tools",
+        "irrigation",
+        "greenhouses"
+      ]
+    }
+  }
+}

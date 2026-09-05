@@ -1,0 +1,160 @@
+{
+  "top": [
+    {
+      "href": "trust.html",
+      "ar": "مركز الثقة",
+      "en": "Trust center",
+      "enabled": true
+    },
+    {
+      "href": "contact.html",
+      "ar": "تواصل معنا",
+      "en": "Contact us",
+      "enabled": true
+    }
+  ],
+  "main": [
+    {
+      "id": "home",
+      "href": "index.html",
+      "ar": "الرئيسية",
+      "en": "Home",
+      "enabled": true
+    },
+    {
+      "id": "shop",
+      "href": "collection.html",
+      "ar": "المتجر",
+      "en": "Shop",
+      "enabled": true
+    },
+    {
+      "id": "categories",
+      "href": "collections.html",
+      "ar": "الأقسام",
+      "en": "Categories",
+      "enabled": true,
+      "mega": true
+    },
+    {
+      "id": "offers",
+      "href": "offers.html",
+      "ar": "العروض",
+      "en": "Offers",
+      "enabled": true
+    },
+    {
+      "id": "brands",
+      "href": "brands.html",
+      "ar": "البراندات",
+      "en": "Brands",
+      "enabled": true
+    },
+    {
+      "id": "b2b",
+      "href": "wholesale.html",
+      "ar": "المزارع والشركات",
+      "en": "Farm & B2B",
+      "enabled": true
+    },
+    {
+      "id": "about",
+      "href": "about.html",
+      "ar": "من نحن",
+      "en": "About",
+      "enabled": true
+    }
+  ],
+  "mobileExtra": [
+    {
+      "href": "quick-order.html",
+      "ar": "طلب سريع",
+      "en": "Quick order",
+      "enabled": true
+    },
+    {
+      "href": "wishlist.html",
+      "ar": "المفضلة",
+      "en": "Wishlist",
+      "enabled": true
+    },
+    {
+      "href": "account.html",
+      "ar": "حسابي",
+      "en": "Account",
+      "enabled": true
+    }
+  ],
+  "footer": [
+    {
+      "titleAr": "التسوق",
+      "titleEn": "Shop",
+      "type": "categories",
+      "enabled": true
+    },
+    {
+      "titleAr": "للمزارع",
+      "titleEn": "For farms",
+      "enabled": true,
+      "links": [
+        {
+          "href": "quick-order.html",
+          "ar": "الطلب السريع",
+          "en": "Quick order"
+        },
+        {
+          "href": "saved-lists.html",
+          "ar": "قوائم المزرعة",
+          "en": "Farm lists"
+        },
+        {
+          "href": "wholesale.html",
+          "ar": "طلب عرض سعر",
+          "en": "Request a quote"
+        },
+        {
+          "href": "brands.html",
+          "ar": "العلامات التجارية",
+          "en": "Brands"
+        }
+      ]
+    },
+    {
+      "titleAr": "الشركة والمساعدة",
+      "titleEn": "Company & help",
+      "enabled": true,
+      "links": [
+        {
+          "href": "about.html",
+          "ar": "من نحن",
+          "en": "About"
+        },
+        {
+          "href": "contact.html",
+          "ar": "تواصل معنا",
+          "en": "Contact us"
+        },
+        {
+          "href": "faq.html",
+          "ar": "الأسئلة الشائعة",
+          "en": "FAQ"
+        },
+        {
+          "href": "trust.html",
+          "ar": "مركز الثقة",
+          "en": "Trust center"
+        },
+        {
+          "href": "privacy.html",
+          "ar": "الخصوصية",
+          "en": "Privacy"
+        },
+        {
+          "href": "terms.html",
+          "ar": "الشروط",
+          "en": "Terms"
+        }
+      ]
+    }
+  ]
+}

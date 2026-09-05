@@ -1,0 +1,96 @@
+{
+  "about": {
+    "kicker": "ABOUT",
+    "titleAr": "من نحن",
+    "titleEn": "About Golden Roots",
+    "copyAr": "جولدن روتس للزراعة ومستلزماتها تبني تجربة تجمع الكتالوج، العروض، طلبات الأفراد وطلبات المزارع والشركات في هوية واحدة واضحة.",
+    "copyEn": "Golden Roots Agriculture & Supplies brings catalog, offers, retail ordering and farm/business ordering into one clear brand experience."
+  },
+  "contact": {
+    "kicker": "CONTACT",
+    "titleAr": "تواصل معنا",
+    "titleEn": "Contact us",
+    "copyAr": "للاستفسارات العامة استخدم النموذج. للطلبات الكبيرة استخدم صفحة المزارع والشركات.",
+    "copyEn": "Use the form for general enquiries. For larger orders, use the Farm & B2B page."
+  },
+  "shipping": {
+    "kicker": "SHIPPING",
+    "titleAr": "الشحن والتوصيل",
+    "titleEn": "Shipping & Delivery",
+    "copyAr": "الموقع مجهز لعرض خيارات الشحن لكل الإمارات. الرسوم والمدد النهائية تعتمد عند تشغيل المتجر فعليًا.",
+    "copyEn": "The site is prepared for UAE-wide shipping options. Final rates and delivery times are approved when live operations begin."
+  },
+  "returns": {
+    "kicker": "RETURNS",
+    "titleAr": "الاسترجاع والاستبدال",
+    "titleEn": "Returns & Exchanges",
+    "copyAr": "تم تجهيز الصفحة ومسارها، ويُعتمد النص النهائي للاسترجاع والاستبدال من الشركة قبل الإطلاق.",
+    "copyEn": "The page and flow are prepared; the company approves the final returns and exchanges policy before launch."
+  },
+  "privacy": {
+    "kicker": "PRIVACY",
+    "titleAr": "سياسة الخصوصية",
+    "titleEn": "Privacy Policy",
+    "copyAr": "تم تجهيز بنية سياسة الخصوصية، ويجب اعتماد النص القانوني النهائي حسب طريقة تشغيل الموقع والخدمات المتصلة به.",
+    "copyEn": "The privacy-policy structure is prepared; final legal wording must match the live site's connected services and operations."
+  },
+  "terms": {
+    "kicker": "TERMS",
+    "titleAr": "الشروط والأحكام",
+    "titleEn": "Terms & Conditions",
+    "copyAr": "تم تجهيز بنية الشروط والأحكام، ويُعتمد النص القانوني والتجاري النهائي قبل الإطلاق العام.",
+    "copyEn": "The terms structure is prepared; final legal and commercial wording is approved before public launch."
+  },
+  "faq": [
+    {
+      "qAr": "هل التوصيل متاح داخل كل الإمارات؟",
+      "qEn": "Is delivery available across all emirates?",
+      "aAr": "الموقع مجهز لاختيار أي إمارة من الإمارات السبع، وتظهر رسوم ومدة التوصيل النهائية عند اعتماد التشغيل.",
+      "aEn": "The site supports all seven emirates; final delivery rates and timing are shown when operations are enabled."
+    },
+    {
+      "qAr": "هل يمكن طلب كميات للمزرعة أو الشركة؟",
+      "qEn": "Can farms or companies order in bulk?",
+      "aAr": "نعم، يوجد طلب سريع وقوائم مزرعة ومسار مستقل لطلب عرض سعر.",
+      "aEn": "Yes. Quick Order, Farm Lists and Request Quote are available."
+    },
+    {
+      "qAr": "هل أقدر أحفظ المنتجات وأرجع لها؟",
+      "qEn": "Can I save products for later?",
+      "aAr": "نعم، يمكنك استخدام المفضلة وقوائم المزرعة والسلة المحفوظة للرجوع لاختياراتك بسرعة.",
+      "aEn": "Yes. Wishlist, Farm Lists and Saved Cart help you return to your selections quickly."
+    },
+    {
+      "qAr": "هل أقدر أبحث برقم SKU؟",
+      "qEn": "Can I search by SKU?",
+      "aAr": "نعم، البحث يدعم اسم المنتج والقسم والكلمات العربية والإنجليزية ورقم SKU.",
+      "aEn": "Yes. Search supports product names, categories, Arabic and English terms, and SKU."
+    }
+  ],
+  "trustFaq": [
+    {
+      "qAr": "كيف أعرف حالة توفر المنتج؟",
+      "qEn": "How do I know product availability?",
+      "aAr": "تظهر حالة التوفر على بطاقة المنتج وداخل صفحة المنتج قبل الإضافة للسلة.",
+      "aEn": "Availability appears on the product card and product page before adding to cart."
+    },
+    {
+      "qAr": "هل يوجد مسار للكميات؟",
+      "qEn": "Is there a volume-order path?",
+      "aAr": "نعم، الطلب السريع وقوائم المزرعة وطلب عرض السعر موجودة كمسارات منفصلة.",
+      "aEn": "Yes. Quick Order, Farm Lists and Request Quote are separate flows."
+    },
+    {
+      "qAr": "هل الدفع الإلكتروني يعمل الآن؟",
+      "qEn": "Is online payment live now?",
+      "aAr": "لا. صفحة إتمام الطلب الحالية تعرض تجربة الواجهة فقط إلى أن يتم ربط مزود دفع حقيقي.",
+      "aEn": "No. The current checkout demonstrates the interface until a real payment provider is connected."
+    },
+    {
+      "qAr": "هل السياسات نهائية؟",
+      "qEn": "Are the policies final?",
+      "aAr": "تصميم صفحات الشحن والاسترجاع والخصوصية جاهز، أما النصوص التشغيلية والقانونية النهائية فتُعتمد من الشركة قبل الإطلاق.",
+      "aEn": "Shipping, returns and privacy page designs are ready; final operational and legal wording must be approved by the company before launch."
+    }
+  ]
+}

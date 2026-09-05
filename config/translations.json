@@ -1,0 +1,46 @@
+{
+  "header.search": {
+    "ar": "ابحث عن منتج، قسم أو SKU",
+    "en": "Search product, category or SKU"
+  },
+  "header.install": {
+    "ar": "تثبيت على الموبايل",
+    "en": "Install on mobile"
+  },
+  "header.account": {
+    "ar": "حسابي",
+    "en": "Account"
+  },
+  "header.wishlist": {
+    "ar": "المفضلة",
+    "en": "Wishlist"
+  },
+  "header.cart": {
+    "ar": "السلة",
+    "en": "Cart"
+  },
+  "footer.startShopping": {
+    "ar": "ابدأ التسوق",
+    "en": "Start shopping"
+  },
+  "footer.volumeOrders": {
+    "ar": "طلبات الكميات",
+    "en": "Volume orders"
+  },
+  "home.allCategories": {
+    "ar": "كل الأقسام",
+    "en": "All categories"
+  },
+  "home.openShop": {
+    "ar": "عرض المتجر",
+    "en": "Open shop"
+  },
+  "home.allOffers": {
+    "ar": "كل العروض",
+    "en": "All offers"
+  },
+  "home.trustCenter": {
+    "ar": "مركز الثقة",
+    "en": "Trust center"
+  }
+}
